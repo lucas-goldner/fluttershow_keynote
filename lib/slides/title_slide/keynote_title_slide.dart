@@ -77,7 +77,7 @@ class KeynoteTitleSlide extends StatelessWidget {
               ),
               flexUnits: 2,
             ),
-            footerBottomSpacing ?? verticalMargin48
+            footerBottomSpacing ?? verticalMargin8
           ],
         ),
       );
