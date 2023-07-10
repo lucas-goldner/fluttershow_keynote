@@ -1,0 +1,22 @@
+name: fluttershow_keynote
+description: Library for keynote slides for the FlutterShow framework
+version: 0.0.1
+homepage: https://github.com/lucas-goldner/FlutterShow
+
+environment:
+  sdk: ">=3.0.3 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fluttershow_base:
+    path: "../fluttershow_base"
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^4.0.0+1
+
+flutter:
