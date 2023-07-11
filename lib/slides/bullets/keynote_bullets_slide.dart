@@ -10,6 +10,7 @@ class KeynoteBulletsSlide extends StatelessWidget {
     this.currentIndex,
     this.bulletPointsAlignment,
     this.bulletTextAlignment,
+    this.bulletPointsPadding,
     this.padding,
     this.footerFlexUnits,
     this.bulletPointsWidgetReplacement,
@@ -24,6 +25,7 @@ class KeynoteBulletsSlide extends StatelessWidget {
   final Alignment? bulletPointsAlignment;
   final TextAlign? bulletTextAlignment;
 
+  final EdgeInsets? bulletPointsPadding;
   final EdgeInsets? padding;
   final int? footerFlexUnits;
 
@@ -50,12 +52,14 @@ class KeynoteBulletsSlide extends StatelessWidget {
                             textAlign: bulletTextAlignment ?? TextAlign.left,
                             bullet: bullets ?? ListBullets.circle,
                             style: bulletTextStyle,
+                            padding: bulletPointsPadding,
                           )
                         : ListText(
                             texts: bulletPoints ?? [],
                             textAlign: bulletTextAlignment ?? TextAlign.left,
                             bullet: bullets ?? ListBullets.circle,
                             style: bulletTextStyle ?? KeynoteTextstyles.body(),
+                            padding: bulletPointsPadding,
                           ),
                   ),
               flexUnits: footerFlexUnits ?? 6,
