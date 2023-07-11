@@ -29,4 +29,13 @@ class KeynoteGradients {
       Color(0xFF0076F7),
     ],
   );
+
+  static LinearGradient quoteGradient = const LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color.fromARGB(255, 255, 35, 180),
+      Color.fromARGB(255, 255, 219, 64),
+    ],
+  );
 }

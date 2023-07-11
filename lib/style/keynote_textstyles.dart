@@ -268,4 +268,72 @@ class KeynoteTextstyles {
         return _factVariantOne(color: color, fontSize: fontSize);
     }
   }
+
+  static TextStyle _quoteVariantOne({
+    Color? color,
+    double? fontSize,
+  }) =>
+      TextStyle(
+        fontSize: fontSize ?? 84,
+        fontWeight: FontWeight.w600,
+        fontFamily: 'Graphik',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle _quoteVariantTwo({Color? color, double? fontSize}) =>
+      TextStyle(
+        fontSize: fontSize ?? 85,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Helvetica Neue',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle quote({
+    Variants? variant,
+    Color? color,
+    double? fontSize,
+  }) {
+    switch (variant) {
+      case Variants.variantOne:
+        return _quoteVariantOne(color: color, fontSize: fontSize);
+      case Variants.variantTwo:
+        return _quoteVariantTwo(color: color, fontSize: fontSize);
+      case _:
+        return _quoteVariantOne(color: color, fontSize: fontSize);
+    }
+  }
+
+  static TextStyle _attributionVariantOne({
+    Color? color,
+    double? fontSize,
+  }) =>
+      TextStyle(
+        fontSize: fontSize ?? 44,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Graphik',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle _attributionVariantTwo({Color? color, double? fontSize}) =>
+      TextStyle(
+        fontSize: fontSize ?? 36,
+        fontWeight: FontWeight.w700,
+        fontFamily: 'Helvetica Neue',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle attribution({
+    Variants? variant,
+    Color? color,
+    double? fontSize,
+  }) {
+    switch (variant) {
+      case Variants.variantOne:
+        return _attributionVariantOne(color: color, fontSize: fontSize);
+      case Variants.variantTwo:
+        return _attributionVariantTwo(color: color, fontSize: fontSize);
+      case _:
+        return _attributionVariantOne(color: color, fontSize: fontSize);
+    }
+  }
 }
