@@ -22,6 +22,10 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
     this.bodyFlexUnits,
     this.footerFlexUnits,
     this.variant,
+    this.titleWidgetReplacement,
+    this.subtitleWidgetReplacement,
+    this.footerWidgetReplacement,
+    this.imageWidgetReplacement,
     super.key,
   });
 
@@ -29,6 +33,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
   final Image image;
   final String? subTitleText;
   final String? footerText;
+
   final Gradient? titleGradient;
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
@@ -36,60 +41,70 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
   final Alignment? titleAlignment;
   final Alignment? subtitleAlignment;
   final Alignment? footerAlignment;
+
   final Widget? titleSubTitleSpacing;
   final Widget? footerBottomSpacing;
   final EdgeInsets? padding;
-  final Variants? variant;
   final int? headerFlexUnits;
   final int? bodyFlexUnits;
   final int? footerFlexUnits;
 
+  final Widget? titleWidgetReplacement;
+  final Widget? subtitleWidgetReplacement;
+  final Widget? footerWidgetReplacement;
+  final Widget? imageWidgetReplacement;
+
+  final Variants? variant;
+
   Widget _variantOne() => Stack(
         children: [
-          image,
+          imageWidgetReplacement ?? image,
           Padding(
             padding: padding ?? allPadding48,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 LayoutHeader(
-                  Align(
-                    alignment: titleAlignment ?? Alignment.bottomCenter,
-                    child: titleGradient != null
-                        ? GradientText(
-                            titleText,
-                            gradient: titleGradient ??
-                                const LinearGradient(
-                                  colors: Colors.primaries,
-                                ),
-                            style: titleStyle,
-                          )
-                        : Text(
-                            titleText,
-                            style: titleStyle,
-                          ),
-                  ),
+                  titleWidgetReplacement ??
+                      Align(
+                        alignment: titleAlignment ?? Alignment.bottomCenter,
+                        child: titleGradient != null
+                            ? GradientText(
+                                titleText,
+                                gradient: titleGradient ??
+                                    const LinearGradient(
+                                      colors: Colors.primaries,
+                                    ),
+                                style: titleStyle,
+                              )
+                            : Text(
+                                titleText,
+                                style: titleStyle,
+                              ),
+                      ),
                   flexUnits: headerFlexUnits ?? 4,
                 ),
                 titleSubTitleSpacing ?? verticalMargin8,
                 LayoutBody(
-                  Align(
-                    alignment: subtitleAlignment ?? Alignment.topCenter,
-                    child: Text(
-                      subTitleText ?? '',
-                      style: subtitleStyle,
-                    ),
-                  ),
+                  subtitleWidgetReplacement ??
+                      Align(
+                        alignment: subtitleAlignment ?? Alignment.topCenter,
+                        child: Text(
+                          subTitleText ?? '',
+                          style: subtitleStyle,
+                        ),
+                      ),
                   flexUnits: bodyFlexUnits ?? 2,
                 ),
                 LayoutFooter(
-                  Align(
-                    alignment: footerAlignment ?? Alignment.bottomCenter,
-                    child: Text(
-                      footerText ?? '',
-                      style: footerStyle,
-                    ),
-                  ),
+                  footerWidgetReplacement ??
+                      Align(
+                        alignment: footerAlignment ?? Alignment.bottomCenter,
+                        child: Text(
+                          footerText ?? '',
+                          style: footerStyle,
+                        ),
+                      ),
                   flexUnits: footerFlexUnits ?? 2,
                 ),
                 footerBottomSpacing ?? verticalMargin8
@@ -101,7 +116,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
 
   Widget _variantTwo() => Stack(
         children: [
-          image,
+          imageWidgetReplacement ?? image,
           Padding(
             padding: padding ?? allPadding48,
             child: Column(
@@ -109,43 +124,46 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
               children: [
                 footerBottomSpacing ?? verticalMargin8,
                 LayoutFooter(
-                  Align(
-                    alignment: footerAlignment ?? Alignment.topLeft,
-                    child: Text(
-                      footerText ?? '',
-                      style: footerStyle,
-                    ),
-                  ),
+                  footerWidgetReplacement ??
+                      Align(
+                        alignment: footerAlignment ?? Alignment.topLeft,
+                        child: Text(
+                          footerText ?? '',
+                          style: footerStyle,
+                        ),
+                      ),
                   flexUnits: footerFlexUnits ?? 1,
                 ),
                 LayoutHeader(
-                  Align(
-                    alignment: titleAlignment ?? Alignment.bottomLeft,
-                    child: titleGradient != null
-                        ? GradientText(
-                            titleText,
-                            gradient: titleGradient ??
-                                const LinearGradient(
-                                  colors: Colors.primaries,
-                                ),
-                            style: titleStyle,
-                          )
-                        : Text(
-                            titleText,
-                            style: titleStyle,
-                          ),
-                  ),
+                  titleWidgetReplacement ??
+                      Align(
+                        alignment: titleAlignment ?? Alignment.bottomLeft,
+                        child: titleGradient != null
+                            ? GradientText(
+                                titleText,
+                                gradient: titleGradient ??
+                                    const LinearGradient(
+                                      colors: Colors.primaries,
+                                    ),
+                                style: titleStyle,
+                              )
+                            : Text(
+                                titleText,
+                                style: titleStyle,
+                              ),
+                      ),
                   flexUnits: headerFlexUnits ?? 5,
                 ),
                 titleSubTitleSpacing ?? verticalMargin8,
                 LayoutBody(
-                  Align(
-                    alignment: subtitleAlignment ?? Alignment.topLeft,
-                    child: Text(
-                      subTitleText ?? '',
-                      style: subtitleStyle,
-                    ),
-                  ),
+                  subtitleWidgetReplacement ??
+                      Align(
+                        alignment: subtitleAlignment ?? Alignment.topLeft,
+                        child: Text(
+                          subTitleText ?? '',
+                          style: subtitleStyle,
+                        ),
+                      ),
                   flexUnits: bodyFlexUnits ?? 1,
                 ),
               ],

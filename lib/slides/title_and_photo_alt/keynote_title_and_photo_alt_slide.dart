@@ -12,18 +12,27 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
     this.subtitleAlignment,
     this.padding,
     this.titleSubTitleSpacing,
+    this.titleWidgetReplacement,
+    this.subtitleWidgetReplacement,
+    this.imageWidgetReplacement,
     super.key,
   });
 
   final Image image;
   final String title;
   final String subtitle;
+
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
   final Alignment? titleAlignment;
   final Alignment? subtitleAlignment;
+
   final EdgeInsets? padding;
   final Widget? titleSubTitleSpacing;
+
+  final Widget? titleWidgetReplacement;
+  final Widget? subtitleWidgetReplacement;
+  final Widget? imageWidgetReplacement;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -34,31 +43,33 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
               child: Column(
                 children: [
                   LayoutHeader(
-                    Align(
-                      alignment: titleAlignment ?? Alignment.bottomCenter,
-                      child: Text(
-                        title,
-                        style: titleStyle,
-                      ),
-                    ),
+                    titleWidgetReplacement ??
+                        Align(
+                          alignment: titleAlignment ?? Alignment.bottomCenter,
+                          child: Text(
+                            title,
+                            style: titleStyle,
+                          ),
+                        ),
                     flexUnits: 3,
                   ),
                   titleSubTitleSpacing ?? verticalMargin8,
                   LayoutBody(
-                    Align(
-                      alignment: subtitleAlignment ?? Alignment.topCenter,
-                      child: Text(
-                        subtitle,
-                        style: subtitleStyle,
-                      ),
-                    ),
+                    subtitleWidgetReplacement ??
+                        Align(
+                          alignment: subtitleAlignment ?? Alignment.topCenter,
+                          child: Text(
+                            subtitle,
+                            style: subtitleStyle,
+                          ),
+                        ),
                     flexUnits: 3,
                   ),
                 ],
               ),
             ),
             Expanded(
-              child: image,
+              child: imageWidgetReplacement ?? image,
             )
           ],
         ),

@@ -20,11 +20,15 @@ class KeynoteTitleSlide extends StatelessWidget {
     this.headerFlexUnits,
     this.bodyFlexUnits,
     this.footerFlexUnits,
+    this.titleWidgetReplacement,
+    this.subtitleWidgetReplacement,
+    this.footerWidgetReplacement,
   });
 
   final String titleText;
   final String? subTitleText;
   final String? footerText;
+
   final Gradient? titleGradient;
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
@@ -32,12 +36,17 @@ class KeynoteTitleSlide extends StatelessWidget {
   final Alignment? titleAlignment;
   final Alignment? subtitleAlignment;
   final Alignment? footerAlignment;
+
   final Widget? titleSubTitleSpacing;
   final Widget? footerBottomSpacing;
   final EdgeInsets? padding;
   final int? headerFlexUnits;
   final int? bodyFlexUnits;
   final int? footerFlexUnits;
+
+  final Widget? titleWidgetReplacement;
+  final Widget? subtitleWidgetReplacement;
+  final Widget? footerWidgetReplacement;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -46,41 +55,44 @@ class KeynoteTitleSlide extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LayoutHeader(
-              Align(
-                alignment: titleAlignment ?? Alignment.bottomCenter,
-                child: titleGradient != null
-                    ? GradientText(
-                        titleText,
-                        gradient: titleGradient ??
-                            const LinearGradient(colors: Colors.primaries),
-                        style: titleStyle,
-                      )
-                    : Text(
-                        titleText,
-                        style: titleStyle,
-                      ),
-              ),
+              titleWidgetReplacement ??
+                  Align(
+                    alignment: titleAlignment ?? Alignment.bottomCenter,
+                    child: titleGradient != null
+                        ? GradientText(
+                            titleText,
+                            gradient: titleGradient ??
+                                const LinearGradient(colors: Colors.primaries),
+                            style: titleStyle,
+                          )
+                        : Text(
+                            titleText,
+                            style: titleStyle,
+                          ),
+                  ),
               flexUnits: headerFlexUnits ?? 4,
             ),
             titleSubTitleSpacing ?? verticalMargin8,
             LayoutBody(
-              Align(
-                alignment: subtitleAlignment ?? Alignment.topCenter,
-                child: Text(
-                  subTitleText ?? '',
-                  style: subtitleStyle,
-                ),
-              ),
+              subtitleWidgetReplacement ??
+                  Align(
+                    alignment: subtitleAlignment ?? Alignment.topCenter,
+                    child: Text(
+                      subTitleText ?? '',
+                      style: subtitleStyle,
+                    ),
+                  ),
               flexUnits: bodyFlexUnits ?? 2,
             ),
             LayoutFooter(
-              Align(
-                alignment: footerAlignment ?? Alignment.bottomCenter,
-                child: Text(
-                  footerText ?? '',
-                  style: footerStyle,
-                ),
-              ),
+              footerWidgetReplacement ??
+                  Align(
+                    alignment: footerAlignment ?? Alignment.bottomCenter,
+                    child: Text(
+                      footerText ?? '',
+                      style: footerStyle,
+                    ),
+                  ),
               flexUnits: footerFlexUnits ?? 2,
             ),
             footerBottomSpacing ?? verticalMargin8
