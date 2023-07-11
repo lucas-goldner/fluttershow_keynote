@@ -17,6 +17,9 @@ class KeynoteTitleSlide extends StatelessWidget {
     this.titleSubTitleSpacing,
     this.footerBottomSpacing,
     this.padding,
+    this.headerFlexUnits,
+    this.bodyFlexUnits,
+    this.footerFlexUnits,
   });
 
   final String titleText;
@@ -32,6 +35,9 @@ class KeynoteTitleSlide extends StatelessWidget {
   final Widget? titleSubTitleSpacing;
   final Widget? footerBottomSpacing;
   final EdgeInsets? padding;
+  final int? headerFlexUnits;
+  final int? bodyFlexUnits;
+  final int? footerFlexUnits;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -54,7 +60,7 @@ class KeynoteTitleSlide extends StatelessWidget {
                         style: titleStyle,
                       ),
               ),
-              flexUnits: 4,
+              flexUnits: headerFlexUnits ?? 4,
             ),
             titleSubTitleSpacing ?? verticalMargin8,
             LayoutBody(
@@ -65,7 +71,7 @@ class KeynoteTitleSlide extends StatelessWidget {
                   style: subtitleStyle,
                 ),
               ),
-              flexUnits: 2,
+              flexUnits: bodyFlexUnits ?? 2,
             ),
             LayoutFooter(
               Align(
@@ -75,7 +81,7 @@ class KeynoteTitleSlide extends StatelessWidget {
                   style: footerStyle,
                 ),
               ),
-              flexUnits: 2,
+              flexUnits: footerFlexUnits ?? 2,
             ),
             footerBottomSpacing ?? verticalMargin8
           ],

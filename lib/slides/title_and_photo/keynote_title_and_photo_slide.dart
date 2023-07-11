@@ -18,6 +18,9 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
     this.titleSubTitleSpacing,
     this.footerBottomSpacing,
     this.padding,
+    this.headerFlexUnits,
+    this.bodyFlexUnits,
+    this.footerFlexUnits,
     this.variant,
     super.key,
   });
@@ -37,6 +40,9 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
   final Widget? footerBottomSpacing;
   final EdgeInsets? padding;
   final Variants? variant;
+  final int? headerFlexUnits;
+  final int? bodyFlexUnits;
+  final int? footerFlexUnits;
 
   Widget _variantOne() => Stack(
         children: [
@@ -63,7 +69,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                             style: titleStyle,
                           ),
                   ),
-                  flexUnits: 4,
+                  flexUnits: headerFlexUnits ?? 4,
                 ),
                 titleSubTitleSpacing ?? verticalMargin8,
                 LayoutBody(
@@ -74,7 +80,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                       style: subtitleStyle,
                     ),
                   ),
-                  flexUnits: 2,
+                  flexUnits: bodyFlexUnits ?? 2,
                 ),
                 LayoutFooter(
                   Align(
@@ -84,7 +90,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                       style: footerStyle,
                     ),
                   ),
-                  flexUnits: 2,
+                  flexUnits: footerFlexUnits ?? 2,
                 ),
                 footerBottomSpacing ?? verticalMargin8
               ],
@@ -110,7 +116,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                       style: footerStyle,
                     ),
                   ),
-                  flexUnits: 1,
+                  flexUnits: footerFlexUnits ?? 1,
                 ),
                 LayoutHeader(
                   Align(
@@ -129,7 +135,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                             style: titleStyle,
                           ),
                   ),
-                  flexUnits: 5,
+                  flexUnits: headerFlexUnits ?? 5,
                 ),
                 titleSubTitleSpacing ?? verticalMargin8,
                 LayoutBody(
@@ -140,7 +146,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                       style: subtitleStyle,
                     ),
                   ),
-                  flexUnits: 1,
+                  flexUnits: bodyFlexUnits ?? 1,
                 ),
               ],
             ),
