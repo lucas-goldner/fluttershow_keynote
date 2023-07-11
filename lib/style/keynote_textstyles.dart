@@ -81,6 +81,21 @@ class KeynoteTextstyles {
     }
   }
 
+  static TextStyle subtitleSmall({
+    Variants? variant,
+    Color? color,
+    double? fontSize,
+  }) {
+    switch (variant) {
+      case Variants.variantOne:
+        return _subtitleVariantOne(color: color, fontSize: fontSize ?? 54);
+      case Variants.variantTwo:
+        return _subtitleVariantTwo(color: color, fontSize: fontSize ?? 54);
+      case _:
+        return _subtitleVariantOne(color: color, fontSize: fontSize ?? 54);
+    }
+  }
+
   static TextStyle _footerVariantOne({Color? color, double? fontSize}) =>
       TextStyle(
         fontSize: fontSize ?? 35,
@@ -140,6 +155,37 @@ class KeynoteTextstyles {
         return _headingVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _headingVariantOne(color: color, fontSize: fontSize);
+    }
+  }
+
+  static TextStyle _bodyVariantOne({Color? color, double? fontSize}) =>
+      TextStyle(
+        fontSize: fontSize ?? 48,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Graphik',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle _bodyVariantTwo({Color? color, double? fontSize}) =>
+      TextStyle(
+        fontSize: fontSize ?? 48,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Helvetica Neue',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle body({
+    Variants? variant,
+    Color? color,
+    double? fontSize,
+  }) {
+    switch (variant) {
+      case Variants.variantOne:
+        return _bodyVariantOne(color: color, fontSize: fontSize);
+      case Variants.variantTwo:
+        return _bodyVariantTwo(color: color, fontSize: fontSize);
+      case _:
+        return _bodyVariantOne(color: color, fontSize: fontSize);
     }
   }
 }
