@@ -222,4 +222,16 @@ class KeynoteTextstyles {
         return _sectionVariantOne(color: color, fontSize: fontSize);
     }
   }
+
+  static TextStyle statement({
+    Variants? variant,
+    Color? color,
+    double? fontSize,
+  }) =>
+      TextStyle(
+        fontSize: fontSize ?? 116,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Helvetica Neue',
+        color: color ?? CupertinoColors.black,
+      );
 }
