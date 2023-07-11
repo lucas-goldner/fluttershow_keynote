@@ -188,4 +188,38 @@ class KeynoteTextstyles {
         return _bodyVariantOne(color: color, fontSize: fontSize);
     }
   }
+
+  static TextStyle _sectionVariantOne({
+    Color? color,
+    double? fontSize,
+  }) =>
+      TextStyle(
+        fontSize: fontSize ?? 116,
+        fontWeight: FontWeight.w700,
+        fontFamily: 'Graphik',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle _sectionVariantTwo({Color? color, double? fontSize}) =>
+      TextStyle(
+        fontSize: fontSize ?? 116,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Helvetica Neue',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle section({
+    Variants? variant,
+    Color? color,
+    double? fontSize,
+  }) {
+    switch (variant) {
+      case Variants.variantOne:
+        return _sectionVariantOne(color: color, fontSize: fontSize);
+      case Variants.variantTwo:
+        return _sectionVariantTwo(color: color, fontSize: fontSize);
+      case _:
+        return _sectionVariantOne(color: color, fontSize: fontSize);
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
+import 'package:fluttershow_keynote/style/keynote_gradients.dart';
 
 class KeynoteTitleSlide extends StatelessWidget {
   const KeynoteTitleSlide({
@@ -62,7 +63,7 @@ class KeynoteTitleSlide extends StatelessWidget {
                         ? GradientText(
                             titleText,
                             gradient: titleGradient ??
-                                const LinearGradient(colors: Colors.primaries),
+                                KeynoteGradients.titleSlideGradient,
                             style: titleStyle,
                           )
                         : Text(

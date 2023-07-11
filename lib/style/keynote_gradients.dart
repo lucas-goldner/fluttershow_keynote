@@ -20,4 +20,13 @@ class KeynoteGradients {
       CupertinoColors.systemPink,
     ],
   );
+
+  static LinearGradient sectionTitleGradient = const LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color(0xFF00FC40),
+      Color(0xFF0076F7),
+    ],
+  );
 }
