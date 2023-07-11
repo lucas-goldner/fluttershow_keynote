@@ -234,4 +234,38 @@ class KeynoteTextstyles {
         fontFamily: 'Helvetica Neue',
         color: color ?? CupertinoColors.black,
       );
+
+  static TextStyle _factVariantOne({
+    Color? color,
+    double? fontSize,
+  }) =>
+      TextStyle(
+        fontSize: fontSize ?? 224,
+        fontWeight: FontWeight.w600,
+        fontFamily: 'Graphik',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle _factVariantTwo({Color? color, double? fontSize}) =>
+      TextStyle(
+        fontSize: fontSize ?? 250,
+        fontWeight: FontWeight.w700,
+        fontFamily: 'Helvetica Neue',
+        color: color ?? CupertinoColors.black,
+      );
+
+  static TextStyle fact({
+    Variants? variant,
+    Color? color,
+    double? fontSize,
+  }) {
+    switch (variant) {
+      case Variants.variantOne:
+        return _factVariantOne(color: color, fontSize: fontSize);
+      case Variants.variantTwo:
+        return _factVariantTwo(color: color, fontSize: fontSize);
+      case _:
+        return _factVariantOne(color: color, fontSize: fontSize);
+    }
+  }
 }
