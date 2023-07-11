@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttershow_base/components/widgets/fluttershow_base_components.dart';
+import 'package:fluttershow_keynote/model/enum/variants.dart';
 import 'package:fluttershow_keynote/slides/title_slide/keynote_title_slide.dart';
+import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
 class KeynoteTitleSlideVariants {
   static KeynoteTitleSlide variantOne({
@@ -8,18 +10,15 @@ class KeynoteTitleSlideVariants {
     required String subTitleText,
     required String footerText,
     required Gradient gradient,
-    required TextStyle titleStyle,
-    required TextStyle subtitleStyle,
-    required TextStyle footerStyle,
   }) =>
       KeynoteTitleSlide(
         titleText: titleText,
         subTitleText: subTitleText,
         footerText: footerText,
         titleGradient: gradient,
-        titleStyle: titleStyle,
-        subtitleStyle: subtitleStyle,
-        footerStyle: footerStyle,
+        titleStyle: KeynoteTextstyles.title(),
+        subtitleStyle: KeynoteTextstyles.subtitle(),
+        footerStyle: KeynoteTextstyles.footer(),
         titleAlignment: Alignment.bottomCenter,
         subtitleAlignment: Alignment.topCenter,
         footerAlignment: Alignment.bottomCenter,
@@ -29,17 +28,14 @@ class KeynoteTitleSlideVariants {
     required String titleText,
     required String subTitleText,
     required String footerText,
-    required TextStyle titleStyle,
-    required TextStyle subtitleStyle,
-    required TextStyle footerStyle,
   }) =>
       KeynoteTitleSlide(
         titleText: titleText,
         subTitleText: subTitleText,
         footerText: footerText,
-        titleStyle: titleStyle,
-        subtitleStyle: subtitleStyle,
-        footerStyle: footerStyle,
+        titleStyle: KeynoteTextstyles.title(variant: Variants.variantTwo),
+        subtitleStyle: KeynoteTextstyles.subtitle(variant: Variants.variantTwo),
+        footerStyle: KeynoteTextstyles.footer(variant: Variants.variantTwo),
         titleAlignment: Alignment.bottomLeft,
         subtitleAlignment: Alignment.topLeft,
         footerAlignment: Alignment.bottomLeft,

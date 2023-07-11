@@ -7,24 +7,24 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
     required this.titleText,
     required this.image,
     this.subTitleText,
-    this.footerText,
+    this.headingText,
     this.titleStyle,
     this.titleGradient,
     this.subtitleStyle,
-    this.footerStyle,
+    this.headingStyle,
     this.titleAlignment,
     this.subtitleAlignment,
-    this.footerAlignment,
+    this.headingAlignment,
     this.titleSubTitleSpacing,
-    this.footerBottomSpacing,
+    this.headingBottomSpacing,
     this.padding,
     this.headerFlexUnits,
     this.bodyFlexUnits,
-    this.footerFlexUnits,
+    this.headingFlexUnits,
     this.variant,
     this.titleWidgetReplacement,
     this.subtitleWidgetReplacement,
-    this.footerWidgetReplacement,
+    this.headingWidgetReplacement,
     this.imageWidgetReplacement,
     super.key,
   });
@@ -32,26 +32,26 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
   final String titleText;
   final Image image;
   final String? subTitleText;
-  final String? footerText;
+  final String? headingText;
 
   final Gradient? titleGradient;
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
-  final TextStyle? footerStyle;
+  final TextStyle? headingStyle;
   final Alignment? titleAlignment;
   final Alignment? subtitleAlignment;
-  final Alignment? footerAlignment;
+  final Alignment? headingAlignment;
 
   final Widget? titleSubTitleSpacing;
-  final Widget? footerBottomSpacing;
+  final Widget? headingBottomSpacing;
   final EdgeInsets? padding;
   final int? headerFlexUnits;
   final int? bodyFlexUnits;
-  final int? footerFlexUnits;
+  final int? headingFlexUnits;
 
   final Widget? titleWidgetReplacement;
   final Widget? subtitleWidgetReplacement;
-  final Widget? footerWidgetReplacement;
+  final Widget? headingWidgetReplacement;
   final Widget? imageWidgetReplacement;
 
   final Variants? variant;
@@ -97,17 +97,17 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                   flexUnits: bodyFlexUnits ?? 2,
                 ),
                 LayoutFooter(
-                  footerWidgetReplacement ??
+                  headingWidgetReplacement ??
                       Align(
-                        alignment: footerAlignment ?? Alignment.bottomCenter,
+                        alignment: headingAlignment ?? Alignment.bottomCenter,
                         child: Text(
-                          footerText ?? '',
-                          style: footerStyle,
+                          headingText ?? '',
+                          style: headingStyle,
                         ),
                       ),
-                  flexUnits: footerFlexUnits ?? 2,
+                  flexUnits: headingFlexUnits ?? 2,
                 ),
-                footerBottomSpacing ?? verticalMargin8
+                headingBottomSpacing ?? verticalMargin8
               ],
             ),
           ),
@@ -122,17 +122,17 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                footerBottomSpacing ?? verticalMargin8,
+                headingBottomSpacing ?? verticalMargin8,
                 LayoutFooter(
-                  footerWidgetReplacement ??
+                  headingWidgetReplacement ??
                       Align(
-                        alignment: footerAlignment ?? Alignment.topLeft,
+                        alignment: headingAlignment ?? Alignment.topLeft,
                         child: Text(
-                          footerText ?? '',
-                          style: footerStyle,
+                          headingText ?? '',
+                          style: headingStyle,
                         ),
                       ),
-                  flexUnits: footerFlexUnits ?? 1,
+                  flexUnits: headingFlexUnits ?? 1,
                 ),
                 LayoutHeader(
                   titleWidgetReplacement ??
