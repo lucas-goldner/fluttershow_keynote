@@ -7,7 +7,7 @@ class KeynoteTitleAndPhotoAltSlideVariations {
   static KeynoteTitleAndPhotoAltSlide variantOne({
     required String title,
     required String subtitle,
-    required Image image,
+    required Widget image,
   }) =>
       KeynoteTitleAndPhotoAltSlide(
         image: image,
@@ -20,7 +20,7 @@ class KeynoteTitleAndPhotoAltSlideVariations {
   static KeynoteTitleAndPhotoAltSlide variantTwo({
     required String title,
     required String subtitle,
-    required Image image,
+    required Widget image,
   }) =>
       KeynoteTitleAndPhotoAltSlide(
         image: image,

@@ -6,7 +6,7 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 class KeynoteTitleAndPhotoSlideVariants {
   static KeynoteTitleAndPhotoSlide variantOne({
     required String titleText,
-    required Image image,
+    required Widget image,
     required String subTitleText,
     required String headingText,
     required Gradient gradient,
@@ -30,7 +30,7 @@ class KeynoteTitleAndPhotoSlideVariants {
     required String titleText,
     required String subTitleText,
     required String headingText,
-    required Image image,
+    required Widget image,
   }) =>
       KeynoteTitleAndPhotoSlide(
         titleText: titleText,

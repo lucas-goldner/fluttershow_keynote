@@ -7,7 +7,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 116,
         fontWeight: FontWeight.w600,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
         wordSpacing: 0.9,
       );
 
@@ -16,7 +16,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 116,
         fontWeight: FontWeight.w600,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
         wordSpacing: 0.8,
       );
 
@@ -55,7 +55,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 64,
         fontWeight: FontWeight.w500,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _subtitleVariantTwo({Color? color, double? fontSize}) =>
@@ -63,7 +63,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 55,
         fontWeight: FontWeight.w700,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle subtitle({
@@ -101,7 +101,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 35,
         fontWeight: FontWeight.w500,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _footerVariantTwo({Color? color, double? fontSize}) =>
@@ -109,7 +109,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 36,
         fontWeight: FontWeight.w700,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle footer({
@@ -132,7 +132,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 35,
         fontWeight: FontWeight.w500,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _headingVariantTwo({Color? color, double? fontSize}) =>
@@ -140,7 +140,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 36,
         fontWeight: FontWeight.w700,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle heading({
@@ -163,7 +163,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 48,
         fontWeight: FontWeight.w400,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _bodyVariantTwo({Color? color, double? fontSize}) =>
@@ -171,7 +171,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 48,
         fontWeight: FontWeight.w400,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle body({
@@ -197,7 +197,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 116,
         fontWeight: FontWeight.w700,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _sectionVariantTwo({Color? color, double? fontSize}) =>
@@ -205,7 +205,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 116,
         fontWeight: FontWeight.w500,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle section({
@@ -232,7 +232,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 116,
         fontWeight: FontWeight.w500,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _factVariantOne({
@@ -243,7 +243,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 224,
         fontWeight: FontWeight.w600,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _factVariantTwo({Color? color, double? fontSize}) =>
@@ -251,7 +251,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 250,
         fontWeight: FontWeight.w700,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle fact({
@@ -277,7 +277,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 84,
         fontWeight: FontWeight.w600,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _quoteVariantTwo({Color? color, double? fontSize}) =>
@@ -285,7 +285,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 85,
         fontWeight: FontWeight.w500,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle quote({
@@ -311,7 +311,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 44,
         fontWeight: FontWeight.w500,
         fontFamily: 'Graphik',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle _attributionVariantTwo({Color? color, double? fontSize}) =>
@@ -319,7 +319,7 @@ class KeynoteTextstyles {
         fontSize: fontSize ?? 36,
         fontWeight: FontWeight.w700,
         fontFamily: 'Helvetica Neue',
-        color: color ?? CupertinoColors.black,
+        color: color,
       );
 
   static TextStyle attribution({

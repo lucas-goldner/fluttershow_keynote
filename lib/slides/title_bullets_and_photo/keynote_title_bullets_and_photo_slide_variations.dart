@@ -7,7 +7,7 @@ class KeynoteTitleBulletAndPhotoSlideVariations {
   static KeynoteTitleBulletAndPhotoSlide variantOne({
     required String title,
     required String subtitle,
-    required Image image,
+    required Widget image,
     required List<String> bulletPoints,
   }) =>
       KeynoteTitleBulletAndPhotoSlide(
@@ -27,7 +27,7 @@ class KeynoteTitleBulletAndPhotoSlideVariations {
   static KeynoteTitleBulletAndPhotoSlide variantTwo({
     required String title,
     required String subtitle,
-    required Image image,
+    required Widget image,
     required List<String> bulletPoints,
   }) =>
       KeynoteTitleBulletAndPhotoSlide(

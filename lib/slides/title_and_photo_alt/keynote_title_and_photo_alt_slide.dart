@@ -18,7 +18,7 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
     super.key,
   });
 
-  final Image image;
+  final Widget image;
   final String title;
   final String subtitle;
 

@@ -30,7 +30,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
   });
 
   final String titleText;
-  final Image image;
+  final Widget image;
   final String? subTitleText;
   final String? headingText;
 

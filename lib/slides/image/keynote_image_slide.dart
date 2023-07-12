@@ -8,7 +8,7 @@ class KeynoteImageSlide extends StatelessWidget {
     super.key,
   });
 
-  final Image image;
+  final Widget image;
   final EdgeInsets? padding;
 
   @override
