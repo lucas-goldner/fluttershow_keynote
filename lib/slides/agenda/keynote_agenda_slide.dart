@@ -20,6 +20,7 @@ class KeynoteAgendaSlide extends StatelessWidget {
     this.titleWidgetReplacement,
     this.subtitleWidgetReplacement,
     this.footerWidget,
+    this.animationIndex,
   });
 
   final String titleText;
@@ -41,6 +42,8 @@ class KeynoteAgendaSlide extends StatelessWidget {
   final Widget? titleWidgetReplacement;
   final Widget? subtitleWidgetReplacement;
   final Widget? footerWidget;
+
+  final int? animationIndex;
 
   @override
   Widget build(BuildContext context) => Padding(

@@ -8,7 +8,7 @@ class KeynoteTitleAndBulletsSlideVariants {
     required String titleText,
     required String subTitleText,
     required List<String>? bulletPoints,
-    int? currentIndex,
+    int? animationIndex,
   }) =>
       KeynoteTitleAndBulletsSlide(
         titleText: titleText,
@@ -21,14 +21,14 @@ class KeynoteTitleAndBulletsSlideVariants {
         titleAlignment: Alignment.bottomCenter,
         subtitleAlignment: Alignment.topCenter,
         bulletPointsAlignment: Alignment.topLeft,
-        currentIndex: currentIndex,
+        animationIndex: animationIndex,
       );
 
   static KeynoteTitleAndBulletsSlide variantTwo({
     required String titleText,
     required String subTitleText,
     required List<String>? bulletPoints,
-    int? currentIndex,
+    int? animationIndex,
   }) =>
       KeynoteTitleAndBulletsSlide(
         titleText: titleText,
@@ -41,6 +41,6 @@ class KeynoteTitleAndBulletsSlideVariants {
         titleAlignment: Alignment.bottomLeft,
         subtitleAlignment: Alignment.topLeft,
         bulletPointsAlignment: Alignment.topLeft,
-        currentIndex: currentIndex,
+        animationIndex: animationIndex,
       );
 }

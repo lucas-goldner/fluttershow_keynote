@@ -8,7 +8,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
     required this.image,
     required this.bulletPoints,
     this.bullets,
-    this.currentIndex,
+    this.animationIndex,
     this.titleStyle,
     this.subtitleStyle,
     this.bulletTextStyle,
@@ -35,7 +35,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   final String subtitle;
   final List<String> bulletPoints;
   final ListBullets? bullets;
-  final int? currentIndex;
+  final int? animationIndex;
 
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
@@ -95,10 +95,10 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
                         Align(
                           alignment:
                               bulletPointsAlignment ?? Alignment.topCenter,
-                          child: currentIndex != null
+                          child: animationIndex != null
                               ? AnimatableListText(
                                   texts: bulletPoints,
-                                  currentIndex: currentIndex ?? 0,
+                                  animationIndex: animationIndex ?? 0,
                                   textAlign:
                                       bulletTextAlignment ?? TextAlign.left,
                                   bullet: bullets ?? ListBullets.circle,

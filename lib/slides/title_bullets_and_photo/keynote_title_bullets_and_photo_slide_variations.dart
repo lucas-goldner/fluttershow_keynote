@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fluttershow_base/components/widgets/spacings/paddings.dart';
+import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_keynote/slides/title_bullets_and_photo/keynote_title_bullets_and_photo_slide.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
