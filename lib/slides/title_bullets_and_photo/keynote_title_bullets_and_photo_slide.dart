@@ -64,6 +64,16 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   final int? animationIndex;
   final AnimationArguments? animationArguments;
 
+  int getAnimationIndices() {
+    final length = bulletPoints.length;
+
+    if (animationIndex != null) {
+      return (animationIndex ?? 0) + 2 - length;
+    }
+
+    return 2;
+  }
+
   @override
   Widget build(BuildContext context) => Padding(
         padding: padding ?? emptyPadding,
@@ -114,10 +124,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
                             child: animationIndex != null
                                 ? AnimatableListText(
                                     texts: bulletPoints,
-                                    animationIndex: ((animationIndex ?? 0) -
-                                            bulletPoints.length +
-                                            1) ??
-                                        0,
+                                    animationIndex: getAnimationIndices(),
                                     textAlign:
                                         bulletTextAlignment ?? TextAlign.left,
                                     bullet: bullets ?? ListBullets.circle,
@@ -126,7 +133,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
                                     padding: bulletPointsPadding,
                                   )
                                 : ListText(
-                                    texts: bulletPoints ?? [],
+                                    texts: bulletPoints,
                                     textAlign:
                                         bulletTextAlignment ?? TextAlign.left,
                                     bullet: bullets ?? ListBullets.circle,

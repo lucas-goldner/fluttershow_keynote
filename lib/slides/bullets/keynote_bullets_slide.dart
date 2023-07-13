@@ -51,7 +51,7 @@ class KeynoteBulletsSlide extends StatelessWidget {
                     alignment: bulletPointsAlignment ?? Alignment.topCenter,
                     child: animationIndex != null
                         ? AnimatableListText(
-                            texts: bulletPoints ?? [],
+                            texts: bulletPoints,
                             animationIndex: animationIndex ?? 0,
                             textAlign: bulletTextAlignment ?? TextAlign.left,
                             bullet: bullets ?? ListBullets.circle,
@@ -60,7 +60,7 @@ class KeynoteBulletsSlide extends StatelessWidget {
                             animationArguments: animationArguments,
                           )
                         : ListText(
-                            texts: bulletPoints ?? [],
+                            texts: bulletPoints,
                             textAlign: bulletTextAlignment ?? TextAlign.left,
                             bullet: bullets ?? ListBullets.circle,
                             style: bulletTextStyle ?? KeynoteTextstyles.body(),
