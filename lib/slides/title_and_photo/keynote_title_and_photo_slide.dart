@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
+import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 import 'package:fluttershow_keynote/model/enum/variants.dart';
 
@@ -26,6 +28,8 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
     this.subtitleWidgetReplacement,
     this.headingWidgetReplacement,
     this.imageWidgetReplacement,
+    this.animationArguments,
+    this.animationIndex,
     super.key,
   });
 
@@ -56,6 +60,9 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
 
   final Variants? variant;
 
+  final int? animationIndex;
+  final AnimationArguments? animationArguments;
+
   Widget _variantOne() => Stack(
         children: [
           imageWidgetReplacement ?? image,
@@ -65,46 +72,61 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 LayoutHeader(
-                  titleWidgetReplacement ??
-                      Align(
-                        alignment: titleAlignment ?? Alignment.bottomCenter,
-                        child: titleGradient != null
-                            ? GradientText(
-                                titleText,
-                                gradient: titleGradient ??
-                                    const LinearGradient(
-                                      colors: Colors.primaries,
-                                    ),
-                                style: titleStyle,
-                              )
-                            : Text(
-                                titleText,
-                                style: titleStyle,
-                              ),
-                      ),
+                  AnimatableWrapper(
+                    titleWidgetReplacement ??
+                        Align(
+                          alignment: titleAlignment ?? Alignment.bottomCenter,
+                          child: titleGradient != null
+                              ? GradientText(
+                                  titleText,
+                                  gradient: titleGradient ??
+                                      const LinearGradient(
+                                        colors: Colors.primaries,
+                                      ),
+                                  style: titleStyle,
+                                )
+                              : Text(
+                                  titleText,
+                                  style: titleStyle,
+                                ),
+                        ),
+                    indexToShowAt: 0,
+                    animationIndex: animationIndex,
+                    animationArguments: animationArguments,
+                  ),
                   flexUnits: headerFlexUnits ?? 4,
                 ),
                 titleSubTitleSpacing ?? verticalMargin8,
                 LayoutBody(
-                  subtitleWidgetReplacement ??
-                      Align(
-                        alignment: subtitleAlignment ?? Alignment.topCenter,
-                        child: Text(
-                          subTitleText ?? '',
-                          style: subtitleStyle,
+                  AnimatableWrapper(
+                    subtitleWidgetReplacement ??
+                        Align(
+                          alignment: subtitleAlignment ?? Alignment.topCenter,
+                          child: Text(
+                            subTitleText ?? '',
+                            style: subtitleStyle,
+                          ),
                         ),
-                      ),
+                    indexToShowAt: 1,
+                    animationIndex: animationIndex,
+                    animationArguments: animationArguments,
+                  ),
                   flexUnits: bodyFlexUnits ?? 2,
                 ),
                 LayoutFooter(
-                  headingWidgetReplacement ??
-                      Align(
-                        alignment: headingAlignment ?? Alignment.bottomCenter,
-                        child: Text(
-                          headingText ?? '',
-                          style: headingStyle,
+                  AnimatableWrapper(
+                    headingWidgetReplacement ??
+                        Align(
+                          alignment: headingAlignment ?? Alignment.bottomCenter,
+                          child: Text(
+                            headingText ?? '',
+                            style: headingStyle,
+                          ),
                         ),
-                      ),
+                    indexToShowAt: 2,
+                    animationIndex: animationIndex,
+                    animationArguments: animationArguments,
+                  ),
                   flexUnits: headingFlexUnits ?? 2,
                 ),
                 headingBottomSpacing ?? verticalMargin8
@@ -124,46 +146,61 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
               children: [
                 headingBottomSpacing ?? verticalMargin8,
                 LayoutFooter(
-                  headingWidgetReplacement ??
-                      Align(
-                        alignment: headingAlignment ?? Alignment.topLeft,
-                        child: Text(
-                          headingText ?? '',
-                          style: headingStyle,
+                  AnimatableWrapper(
+                    headingWidgetReplacement ??
+                        Align(
+                          alignment: headingAlignment ?? Alignment.topLeft,
+                          child: Text(
+                            headingText ?? '',
+                            style: headingStyle,
+                          ),
                         ),
-                      ),
+                    indexToShowAt: 0,
+                    animationIndex: animationIndex,
+                    animationArguments: animationArguments,
+                  ),
                   flexUnits: headingFlexUnits ?? 1,
                 ),
                 LayoutHeader(
-                  titleWidgetReplacement ??
-                      Align(
-                        alignment: titleAlignment ?? Alignment.bottomLeft,
-                        child: titleGradient != null
-                            ? GradientText(
-                                titleText,
-                                gradient: titleGradient ??
-                                    const LinearGradient(
-                                      colors: Colors.primaries,
-                                    ),
-                                style: titleStyle,
-                              )
-                            : Text(
-                                titleText,
-                                style: titleStyle,
-                              ),
-                      ),
+                  AnimatableWrapper(
+                    titleWidgetReplacement ??
+                        Align(
+                          alignment: titleAlignment ?? Alignment.bottomLeft,
+                          child: titleGradient != null
+                              ? GradientText(
+                                  titleText,
+                                  gradient: titleGradient ??
+                                      const LinearGradient(
+                                        colors: Colors.primaries,
+                                      ),
+                                  style: titleStyle,
+                                )
+                              : Text(
+                                  titleText,
+                                  style: titleStyle,
+                                ),
+                        ),
+                    indexToShowAt: 1,
+                    animationIndex: animationIndex,
+                    animationArguments: animationArguments,
+                  ),
                   flexUnits: headerFlexUnits ?? 5,
                 ),
                 titleSubTitleSpacing ?? verticalMargin8,
                 LayoutBody(
-                  subtitleWidgetReplacement ??
-                      Align(
-                        alignment: subtitleAlignment ?? Alignment.topLeft,
-                        child: Text(
-                          subTitleText ?? '',
-                          style: subtitleStyle,
+                  AnimatableWrapper(
+                    subtitleWidgetReplacement ??
+                        Align(
+                          alignment: subtitleAlignment ?? Alignment.topLeft,
+                          child: Text(
+                            subTitleText ?? '',
+                            style: subtitleStyle,
+                          ),
                         ),
-                      ),
+                    indexToShowAt: 2,
+                    animationIndex: animationIndex,
+                    animationArguments: animationArguments,
+                  ),
                   flexUnits: bodyFlexUnits ?? 1,
                 ),
               ],

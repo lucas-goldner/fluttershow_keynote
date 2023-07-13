@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
+import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 
 class KeynotePhoto3UpSlide extends StatelessWidget {
@@ -8,6 +10,8 @@ class KeynotePhoto3UpSlide extends StatelessWidget {
     required this.smallImageTwo,
     this.padding,
     this.imagesPadding,
+    this.animationIndex,
+    this.animationArguments,
     super.key,
   });
 
@@ -18,6 +22,9 @@ class KeynotePhoto3UpSlide extends StatelessWidget {
   final EdgeInsets? padding;
   final EdgeInsets? imagesPadding;
 
+  final int? animationIndex;
+  final AnimationArguments? animationArguments;
+
   @override
   Widget build(BuildContext context) => Padding(
         padding: padding ?? emptyPadding,
@@ -26,25 +33,40 @@ class KeynotePhoto3UpSlide extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Flexible(
-                child: Padding(
-                  padding: imagesPadding ?? emptyPadding,
-                  child: bigImage,
+                child: AnimatableWrapper(
+                  Padding(
+                    padding: imagesPadding ?? emptyPadding,
+                    child: bigImage,
+                  ),
+                  indexToShowAt: 0,
+                  animationIndex: animationIndex,
+                  animationArguments: animationArguments,
                 ),
               ),
               Column(
                 children: [
                   Flexible(
-                    child: Padding(
-                      padding: imagesPadding ?? emptyPadding,
-                      child: smallImageOne,
+                    child: AnimatableWrapper(
+                      Padding(
+                        padding: imagesPadding ?? emptyPadding,
+                        child: smallImageOne,
+                      ),
+                      indexToShowAt: 1,
+                      animationIndex: animationIndex,
+                      animationArguments: animationArguments,
                     ),
                   ),
                   Flexible(
-                    child: Padding(
-                      padding: imagesPadding ?? emptyPadding,
-                      child: smallImageTwo,
+                    child: AnimatableWrapper(
+                      Padding(
+                        padding: imagesPadding ?? emptyPadding,
+                        child: smallImageTwo,
+                      ),
+                      indexToShowAt: 2,
+                      animationIndex: animationIndex,
+                      animationArguments: animationArguments,
                     ),
-                  )
+                  ),
                 ],
               ),
             ],

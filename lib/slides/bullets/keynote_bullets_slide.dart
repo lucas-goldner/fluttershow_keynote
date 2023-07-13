@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
@@ -7,19 +8,19 @@ class KeynoteBulletsSlide extends StatelessWidget {
     required this.bulletPoints,
     this.bulletTextStyle,
     this.bullets,
-    this.animationIndex,
     this.bulletPointsAlignment,
     this.bulletTextAlignment,
     this.bulletPointsPadding,
     this.padding,
     this.footerFlexUnits,
     this.bulletPointsWidgetReplacement,
+    this.animationIndex,
+    this.animationArguments,
     super.key,
   });
 
   final List<String> bulletPoints;
   final ListBullets? bullets;
-  final int? animationIndex;
 
   final TextStyle? bulletTextStyle;
   final Alignment? bulletPointsAlignment;
@@ -30,6 +31,9 @@ class KeynoteBulletsSlide extends StatelessWidget {
   final int? footerFlexUnits;
 
   final Widget? bulletPointsWidgetReplacement;
+
+  final int? animationIndex;
+  final AnimationArguments? animationArguments;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -53,6 +57,7 @@ class KeynoteBulletsSlide extends StatelessWidget {
                             bullet: bullets ?? ListBullets.circle,
                             style: bulletTextStyle,
                             padding: bulletPointsPadding,
+                            animationArguments: animationArguments,
                           )
                         : ListText(
                             texts: bulletPoints ?? [],

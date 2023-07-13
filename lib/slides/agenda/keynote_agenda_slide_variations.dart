@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
 import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_keynote/slides/agenda/keynote_agenda_slide.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
@@ -8,6 +9,8 @@ class KeynoteAgendaSlideVariations {
     required String titleText,
     required String subTitleText,
     Widget? footerWidget,
+    int? animationIndex,
+    AnimationArguments? animationArguments,
   }) =>
       KeynoteAgendaSlide(
         titleText: titleText,
@@ -17,12 +20,16 @@ class KeynoteAgendaSlideVariations {
         titleAlignment: Alignment.bottomCenter,
         subtitleAlignment: Alignment.topCenter,
         footerWidget: footerWidget,
+        animationIndex: animationIndex,
+        animationArguments: animationArguments,
       );
 
   static KeynoteAgendaSlide variantTwo({
     required String titleText,
     required String subTitleText,
     Widget? footerWidget,
+    int? animationIndex,
+    AnimationArguments? animationArguments,
   }) =>
       KeynoteAgendaSlide(
         titleText: titleText,
@@ -33,5 +40,7 @@ class KeynoteAgendaSlideVariations {
         subtitleAlignment: Alignment.topLeft,
         footerWidget: footerWidget,
         padding: allPadding48,
+        animationIndex: animationIndex,
+        animationArguments: animationArguments,
       );
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
+import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 
 class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
@@ -15,6 +17,8 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
     this.titleWidgetReplacement,
     this.subtitleWidgetReplacement,
     this.imageWidgetReplacement,
+    this.animationIndex,
+    this.animationArguments,
     super.key,
   });
 
@@ -34,6 +38,9 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
   final Widget? subtitleWidgetReplacement;
   final Widget? imageWidgetReplacement;
 
+  final int? animationIndex;
+  final AnimationArguments? animationArguments;
+
   @override
   Widget build(BuildContext context) => Padding(
         padding: padding ?? emptyPadding,
@@ -43,33 +50,48 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
               child: Column(
                 children: [
                   LayoutHeader(
-                    titleWidgetReplacement ??
-                        Align(
-                          alignment: titleAlignment ?? Alignment.bottomCenter,
-                          child: Text(
-                            title,
-                            style: titleStyle,
+                    AnimatableWrapper(
+                      titleWidgetReplacement ??
+                          Align(
+                            alignment: titleAlignment ?? Alignment.bottomCenter,
+                            child: Text(
+                              title,
+                              style: titleStyle,
+                            ),
                           ),
-                        ),
+                      indexToShowAt: 0,
+                      animationIndex: animationIndex,
+                      animationArguments: animationArguments,
+                    ),
                     flexUnits: 3,
                   ),
                   titleSubTitleSpacing ?? verticalMargin8,
                   LayoutBody(
-                    subtitleWidgetReplacement ??
-                        Align(
-                          alignment: subtitleAlignment ?? Alignment.topCenter,
-                          child: Text(
-                            subtitle,
-                            style: subtitleStyle,
+                    AnimatableWrapper(
+                      subtitleWidgetReplacement ??
+                          Align(
+                            alignment: subtitleAlignment ?? Alignment.topCenter,
+                            child: Text(
+                              subtitle,
+                              style: subtitleStyle,
+                            ),
                           ),
-                        ),
+                      indexToShowAt: 1,
+                      animationIndex: animationIndex,
+                      animationArguments: animationArguments,
+                    ),
                     flexUnits: 3,
                   ),
                 ],
               ),
             ),
             Expanded(
-              child: imageWidgetReplacement ?? image,
+              child: AnimatableWrapper(
+                imageWidgetReplacement ?? image,
+                indexToShowAt: 2,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
             )
           ],
         ),

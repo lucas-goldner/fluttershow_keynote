@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
 import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_keynote/slides/title_bullets_and_photo/keynote_title_bullets_and_photo_slide.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
@@ -9,6 +10,8 @@ class KeynoteTitleBulletAndPhotoSlideVariations {
     required String subtitle,
     required Widget image,
     required List<String> bulletPoints,
+    int? animationIndex,
+    AnimationArguments? animationArguments,
   }) =>
       KeynoteTitleBulletAndPhotoSlide(
         image: image,
@@ -18,10 +21,11 @@ class KeynoteTitleBulletAndPhotoSlideVariations {
         subtitleStyle: KeynoteTextstyles.subtitleSmall(),
         bulletTextStyle: KeynoteTextstyles.body(),
         bulletPoints: bulletPoints,
+        bulletPointsPadding: horizontalPadding48 + horizontalPadding48,
         titleAlignment: Alignment.bottomCenter,
         subtitleAlignment: Alignment.topCenter,
-        bulletPointsPadding: horizontalPadding48,
-        padding: emptyPadding,
+        animationIndex: animationIndex,
+        animationArguments: animationArguments,
       );
 
   static KeynoteTitleBulletAndPhotoSlide variantTwo({
@@ -29,6 +33,8 @@ class KeynoteTitleBulletAndPhotoSlideVariations {
     required String subtitle,
     required Widget image,
     required List<String> bulletPoints,
+    int? animationIndex,
+    AnimationArguments? animationArguments,
   }) =>
       KeynoteTitleBulletAndPhotoSlide(
         image: image,
@@ -41,5 +47,7 @@ class KeynoteTitleBulletAndPhotoSlideVariations {
         titleStyle: KeynoteTextstyles.titleSmall(),
         subtitleStyle: KeynoteTextstyles.subtitle(),
         bulletTextStyle: KeynoteTextstyles.body(),
+        animationIndex: animationIndex,
+        animationArguments: animationArguments,
       );
 }

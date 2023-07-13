@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
+import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 
 import 'package:fluttershow_keynote/style/keynote_gradients.dart';
@@ -19,6 +21,8 @@ class KeynoteBigFactSlide extends StatelessWidget {
     this.bodyFlexUnits,
     this.titleWidgetReplacement,
     this.subtitleWidgetReplacement,
+    this.animationIndex,
+    this.animationArguments,
   });
 
   final String titleText;
@@ -38,6 +42,9 @@ class KeynoteBigFactSlide extends StatelessWidget {
   final Widget? titleWidgetReplacement;
   final Widget? subtitleWidgetReplacement;
 
+  final int? animationIndex;
+  final AnimationArguments? animationArguments;
+
   @override
   Widget build(BuildContext context) => Padding(
         padding: padding ?? allPadding48,
@@ -45,33 +52,43 @@ class KeynoteBigFactSlide extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LayoutHeader(
-              titleWidgetReplacement ??
-                  Align(
-                    alignment: titleAlignment ?? Alignment.bottomCenter,
-                    child: titleGradient != null
-                        ? GradientText(
-                            titleText,
-                            gradient: titleGradient ??
-                                KeynoteGradients.titleSlideGradient,
-                            style: titleStyle,
-                          )
-                        : Text(
-                            titleText,
-                            style: titleStyle,
-                          ),
-                  ),
+              AnimatableWrapper(
+                titleWidgetReplacement ??
+                    Align(
+                      alignment: titleAlignment ?? Alignment.bottomCenter,
+                      child: titleGradient != null
+                          ? GradientText(
+                              titleText,
+                              gradient: titleGradient ??
+                                  KeynoteGradients.titleSlideGradient,
+                              style: titleStyle,
+                            )
+                          : Text(
+                              titleText,
+                              style: titleStyle,
+                            ),
+                    ),
+                indexToShowAt: 0,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
               flexUnits: headerFlexUnits ?? 2,
             ),
             titleSubTitleSpacing ?? verticalMargin4,
             LayoutBody(
-              subtitleWidgetReplacement ??
-                  Align(
-                    alignment: subtitleAlignment ?? Alignment.topCenter,
-                    child: Text(
-                      subTitleText ?? '',
-                      style: subtitleStyle,
+              AnimatableWrapper(
+                subtitleWidgetReplacement ??
+                    Align(
+                      alignment: subtitleAlignment ?? Alignment.topCenter,
+                      child: Text(
+                        subTitleText ?? '',
+                        style: subtitleStyle,
+                      ),
                     ),
-                  ),
+                indexToShowAt: 1,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
               flexUnits: bodyFlexUnits ?? 2,
             ),
           ],

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
+import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 
 class KeynoteTitleAndBulletsSlide extends StatelessWidget {
@@ -8,7 +10,6 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
     this.bulletPoints,
     this.bulletTextStyle,
     this.bullets,
-    this.animationIndex,
     this.titleStyle,
     this.subtitleStyle,
     this.bulletPointsAlignment,
@@ -25,6 +26,8 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
     this.titleWidgetReplacement,
     this.subtitleWidgetReplacement,
     this.bulletPointsWidgetReplacement,
+    this.animationIndex,
+    this.animationArguments,
     super.key,
   });
 
@@ -32,7 +35,6 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
   final String? subTitleText;
   final List<String>? bulletPoints;
   final ListBullets? bullets;
-  final int? animationIndex;
 
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
@@ -55,6 +57,9 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
   final Widget? subtitleWidgetReplacement;
   final Widget? bulletPointsWidgetReplacement;
 
+  final int? animationIndex;
+  final AnimationArguments? animationArguments;
+
   @override
   Widget build(BuildContext context) => Padding(
         padding: padding ?? allPadding48,
@@ -62,50 +67,70 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LayoutHeader(
-              titleWidgetReplacement ??
-                  Align(
-                    alignment: titleAlignment ?? Alignment.bottomCenter,
-                    child: Text(
-                      titleText,
-                      style: titleStyle,
+              AnimatableWrapper(
+                titleWidgetReplacement ??
+                    Align(
+                      alignment: titleAlignment ?? Alignment.bottomCenter,
+                      child: Text(
+                        titleText,
+                        style: titleStyle,
+                      ),
                     ),
-                  ),
+                indexToShowAt: 0,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
               flexUnits: headerFlexUnits ?? 2,
             ),
             titleSubTitleSpacing ?? const SizedBox.shrink(),
             LayoutBody(
-              subtitleWidgetReplacement ??
-                  Align(
-                    alignment: subtitleAlignment ?? Alignment.topCenter,
-                    child: Text(
-                      subTitleText ?? '',
-                      style: subtitleStyle,
+              AnimatableWrapper(
+                subtitleWidgetReplacement ??
+                    Align(
+                      alignment: subtitleAlignment ?? Alignment.topCenter,
+                      child: Text(
+                        subTitleText ?? '',
+                        style: subtitleStyle,
+                      ),
                     ),
-                  ),
+                indexToShowAt: 1,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
               flexUnits: bodyFlexUnits ?? 1,
             ),
             subtitleBulletTextSpacing ?? verticalMargin32,
             LayoutFooter(
-              bulletPointsWidgetReplacement ??
-                  Align(
-                    alignment: bulletPointsAlignment ?? Alignment.bottomCenter,
-                    child: animationIndex != null
-                        ? AnimatableListText(
-                            texts: bulletPoints ?? [],
-                            animationIndex: animationIndex ?? 0,
-                            textAlign: bulletTextAlignment ?? TextAlign.left,
-                            bullet: bullets ?? ListBullets.circle,
-                            style: bulletTextStyle,
-                            padding: bulletPointsPadding,
-                          )
-                        : ListText(
-                            texts: bulletPoints ?? [],
-                            textAlign: bulletTextAlignment ?? TextAlign.left,
-                            bullet: bullets ?? ListBullets.circle,
-                            style: bulletTextStyle,
-                            padding: bulletPointsPadding,
-                          ),
-                  ),
+              AnimatableWrapper(
+                bulletPointsWidgetReplacement ??
+                    Align(
+                      alignment:
+                          bulletPointsAlignment ?? Alignment.bottomCenter,
+                      child: animationIndex != null
+                          ? AnimatableListText(
+                              texts: bulletPoints ?? [],
+                              animationIndex: ((animationIndex ?? 0) -
+                                      (bulletPoints ?? []).length +
+                                      1) ??
+                                  0,
+                              textAlign: bulletTextAlignment ?? TextAlign.left,
+                              bullet: bullets ?? ListBullets.circle,
+                              style: bulletTextStyle,
+                              padding: bulletPointsPadding,
+                              animationArguments: animationArguments,
+                            )
+                          : ListText(
+                              texts: bulletPoints ?? [],
+                              textAlign: bulletTextAlignment ?? TextAlign.left,
+                              bullet: bullets ?? ListBullets.circle,
+                              style: bulletTextStyle,
+                              padding: bulletPointsPadding,
+                            ),
+                    ),
+                indexToShowAt: 2,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
               flexUnits: footerFlexUnits ?? 6,
             ),
           ],

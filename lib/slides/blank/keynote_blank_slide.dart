@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
+import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 
 class KeynoteBlankSlide extends StatelessWidget {
@@ -16,6 +18,9 @@ class KeynoteBlankSlide extends StatelessWidget {
     this.headerFlexUnits,
     this.bodyFlexUnits,
     this.footerFlexUnits,
+    this.animationIndex,
+    this.animationArguments,
+    this.animationIndices,
   });
 
   final Widget? headerWidget;
@@ -33,6 +38,10 @@ class KeynoteBlankSlide extends StatelessWidget {
   final int? bodyFlexUnits;
   final int? footerFlexUnits;
 
+  final int? animationIndex;
+  final AnimationArguments? animationArguments;
+  final (int, int, int)? animationIndices;
+
   @override
   Widget build(BuildContext context) => Padding(
         padding: padding ?? allPadding48,
@@ -41,9 +50,14 @@ class KeynoteBlankSlide extends StatelessWidget {
           children: [
             if (headerWidget != null)
               LayoutHeader(
-                Align(
-                  alignment: headerAlignment ?? Alignment.center,
-                  child: headerWidget,
+                AnimatableWrapper(
+                  Align(
+                    alignment: headerAlignment ?? Alignment.center,
+                    child: headerWidget,
+                  ),
+                  indexToShowAt: animationIndices?.$1 ?? 0,
+                  animationIndex: animationIndex,
+                  animationArguments: animationArguments,
                 ),
                 flexUnits: headerFlexUnits,
               )
@@ -52,9 +66,14 @@ class KeynoteBlankSlide extends StatelessWidget {
             titleBodySpacing ?? verticalMargin8,
             if (bodyWidget != null)
               LayoutBody(
-                Align(
-                  alignment: bodyAlignment ?? Alignment.center,
-                  child: bodyWidget,
+                AnimatableWrapper(
+                  Align(
+                    alignment: bodyAlignment ?? Alignment.center,
+                    child: bodyWidget,
+                  ),
+                  indexToShowAt: animationIndices?.$2 ?? 1,
+                  animationIndex: animationIndex,
+                  animationArguments: animationArguments,
                 ),
                 flexUnits: bodyFlexUnits,
               )
@@ -63,9 +82,14 @@ class KeynoteBlankSlide extends StatelessWidget {
             bodyFooterSpacing ?? verticalMargin8,
             if (footerWidget != null)
               LayoutFooter(
-                Align(
-                  alignment: footerAlignment ?? Alignment.center,
-                  child: footerWidget,
+                AnimatableWrapper(
+                  Align(
+                    alignment: footerAlignment ?? Alignment.center,
+                    child: footerWidget,
+                  ),
+                  indexToShowAt: animationIndices?.$3 ?? 2,
+                  animationIndex: animationIndex,
+                  animationArguments: animationArguments,
                 ),
                 flexUnits: footerFlexUnits,
               )

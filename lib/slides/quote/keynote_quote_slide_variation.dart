@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 import 'package:fluttershow_keynote/model/enum/variants.dart';
 import 'package:fluttershow_keynote/slides/quote/keynote_quote_slide.dart';
@@ -10,6 +11,8 @@ class KeynoteQuoteSlideVariants {
     required String quoteText,
     required String attributionText,
     required Gradient gradient,
+    int? animationIndex,
+    AnimationArguments? animationArguments,
   }) =>
       KeynoteQuoteSlide(
         quoteText: quoteText,
@@ -19,11 +22,15 @@ class KeynoteQuoteSlideVariants {
         attributionStyle: KeynoteTextstyles.attribution(),
         quoteAlignment: Alignment.bottomCenter,
         attributionAlignment: Alignment.bottomCenter,
+        animationIndex: animationIndex,
+        animationArguments: animationArguments,
       );
 
   static KeynoteQuoteSlide variantTwo({
     required String quoteText,
     required String attributionText,
+    int? animationIndex,
+    AnimationArguments? animationArguments,
   }) =>
       KeynoteQuoteSlide(
         quoteText: quoteText,
@@ -36,5 +43,7 @@ class KeynoteQuoteSlideVariants {
         headerFlexUnits: 3,
         bodyFlexUnits: 3,
         padding: horizontalPadding48 + horizontalPadding32,
+        animationIndex: animationIndex,
+        animationArguments: animationArguments,
       );
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
 import 'package:fluttershow_base/components/widgets/fluttershow_base_components.dart';
 import 'package:fluttershow_keynote/model/enum/variants.dart';
 import 'package:fluttershow_keynote/slides/title_slide/keynote_title_slide.dart';
@@ -9,7 +10,9 @@ class KeynoteTitleSlideVariants {
     required String titleText,
     required String subTitleText,
     required String footerText,
-    required Gradient gradient,
+    Gradient? gradient,
+    int? animationIndex,
+    AnimationArguments? animationArguments,
   }) =>
       KeynoteTitleSlide(
         titleText: titleText,
@@ -22,12 +25,16 @@ class KeynoteTitleSlideVariants {
         titleAlignment: Alignment.bottomCenter,
         subtitleAlignment: Alignment.topCenter,
         footerAlignment: Alignment.bottomCenter,
+        animationIndex: animationIndex,
+        animationArguments: animationArguments,
       );
 
   static KeynoteTitleSlide variantTwo({
     required String titleText,
     required String subTitleText,
     required String footerText,
+    int? animationIndex,
+    AnimationArguments? animationArguments,
   }) =>
       KeynoteTitleSlide(
         titleText: titleText,
@@ -40,5 +47,7 @@ class KeynoteTitleSlideVariants {
         subtitleAlignment: Alignment.topLeft,
         footerAlignment: Alignment.bottomLeft,
         padding: allPadding48,
+        animationIndex: animationIndex,
+        animationArguments: animationArguments,
       );
 }

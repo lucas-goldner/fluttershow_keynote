@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttershow_base/components/model/animation_arguments.dart';
+import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 import 'package:fluttershow_keynote/style/keynote_gradients.dart';
 
@@ -24,6 +26,8 @@ class KeynoteTitleSlide extends StatelessWidget {
     this.titleWidgetReplacement,
     this.subtitleWidgetReplacement,
     this.footerWidgetReplacement,
+    this.animationIndex,
+    this.animationArguments,
   });
 
   final String titleText;
@@ -49,6 +53,9 @@ class KeynoteTitleSlide extends StatelessWidget {
   final Widget? subtitleWidgetReplacement;
   final Widget? footerWidgetReplacement;
 
+  final int? animationIndex;
+  final AnimationArguments? animationArguments;
+
   @override
   Widget build(BuildContext context) => Padding(
         padding: padding ?? allPadding48,
@@ -56,44 +63,59 @@ class KeynoteTitleSlide extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LayoutHeader(
-              titleWidgetReplacement ??
-                  Align(
-                    alignment: titleAlignment ?? Alignment.bottomCenter,
-                    child: titleGradient != null
-                        ? GradientText(
-                            titleText,
-                            gradient: titleGradient ??
-                                KeynoteGradients.titleSlideGradient,
-                            style: titleStyle,
-                          )
-                        : Text(
-                            titleText,
-                            style: titleStyle,
-                          ),
-                  ),
+              AnimatableWrapper(
+                titleWidgetReplacement ??
+                    Align(
+                      alignment: titleAlignment ?? Alignment.bottomCenter,
+                      child: titleGradient != null
+                          ? GradientText(
+                              titleText,
+                              gradient: titleGradient ??
+                                  KeynoteGradients.titleSlideGradient,
+                              style: titleStyle,
+                            )
+                          : Text(
+                              titleText,
+                              style: titleStyle,
+                            ),
+                    ),
+                indexToShowAt: 0,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
               flexUnits: headerFlexUnits ?? 4,
             ),
             titleSubTitleSpacing ?? verticalMargin8,
             LayoutBody(
-              subtitleWidgetReplacement ??
-                  Align(
-                    alignment: subtitleAlignment ?? Alignment.topCenter,
-                    child: Text(
-                      subTitleText ?? '',
-                      style: subtitleStyle,
+              AnimatableWrapper(
+                subtitleWidgetReplacement ??
+                    Align(
+                      alignment: subtitleAlignment ?? Alignment.topCenter,
+                      child: Text(
+                        subTitleText ?? '',
+                        style: subtitleStyle,
+                      ),
                     ),
-                  ),
+                indexToShowAt: 1,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
               flexUnits: bodyFlexUnits ?? 2,
             ),
             LayoutFooter(
-              footerWidgetReplacement ??
-                  Align(
-                    alignment: footerAlignment ?? Alignment.bottomCenter,
-                    child: Text(
-                      footerText ?? '',
-                      style: footerStyle,
+              AnimatableWrapper(
+                footerWidgetReplacement ??
+                    Align(
+                      alignment: footerAlignment ?? Alignment.bottomCenter,
+                      child: Text(
+                        footerText ?? '',
+                        style: footerStyle,
+                      ),
                     ),
-                  ),
+                indexToShowAt: 2,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
+              ),
               flexUnits: footerFlexUnits ?? 2,
             ),
             footerBottomSpacing ?? verticalMargin8
