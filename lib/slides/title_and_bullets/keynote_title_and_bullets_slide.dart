@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttershow_base/components/model/animation_arguments.dart';
-import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
+import 'package:fluttershow_base/components/widgets/fluttershow_base_components.dart';
+import 'package:fluttershow_base/components/widgets/spacing/margins.dart';
+import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 
 class KeynoteTitleAndBulletsSlide extends StatelessWidget {
@@ -116,23 +117,15 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
                     Align(
                       alignment:
                           bulletPointsAlignment ?? Alignment.bottomCenter,
-                      child: animationIndex != null
-                          ? AnimatableListText(
-                              texts: bulletPoints ?? [],
-                              animationIndex: getAnimationIndices(),
-                              textAlign: bulletTextAlignment ?? TextAlign.left,
-                              bullet: bullets ?? ListBullets.circle,
-                              style: bulletTextStyle,
-                              padding: bulletPointsPadding,
-                              animationArguments: animationArguments,
-                            )
-                          : ListText(
-                              texts: bulletPoints ?? [],
-                              textAlign: bulletTextAlignment ?? TextAlign.left,
-                              bullet: bullets ?? ListBullets.circle,
-                              style: bulletTextStyle,
-                              padding: bulletPointsPadding,
-                            ),
+                      child: ListText(
+                        texts: bulletPoints ?? [],
+                        textAlign: bulletTextAlignment ?? TextAlign.left,
+                        bullet: bullets ?? ListBullets.circle,
+                        style: bulletTextStyle,
+                        padding: bulletPointsPadding,
+                        animationArguments: animationArguments,
+                        animationIndex: getAnimationIndices(),
+                      ),
                     ),
                 indexToShowAt: 2,
                 animationIndex: animationIndex,

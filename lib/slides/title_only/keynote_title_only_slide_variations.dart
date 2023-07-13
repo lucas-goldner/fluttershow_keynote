@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fluttershow_base/components/model/animation_arguments.dart';
-import 'package:fluttershow_base/components/widgets/fluttershow_base_components.dart';
+import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_keynote/slides/title_only/keynote_title_only_slide.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 

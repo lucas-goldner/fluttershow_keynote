@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttershow_base/fluttershow_base.dart';
+import 'package:fluttershow_base/components/widgets/fluttershow_base_components.dart';
+import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_keynote/style/keynote_gradients.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 

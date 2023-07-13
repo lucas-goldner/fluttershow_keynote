@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fluttershow_base/fluttershow_base.dart';
+import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 
 class KeynoteImageSlide extends StatelessWidget {
   const KeynoteImageSlide({

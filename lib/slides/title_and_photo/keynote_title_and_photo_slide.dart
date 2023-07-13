@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttershow_base/components/model/animation_arguments.dart';
-import 'package:fluttershow_base/components/widgets/wrapper/animatable_wrapper.dart';
+import 'package:fluttershow_base/components/widgets/fluttershow_base_components.dart';
+import 'package:fluttershow_base/components/widgets/spacing/margins.dart';
+import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 import 'package:fluttershow_keynote/model/enum/variants.dart';
 

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fluttershow_base/components/model/animation_arguments.dart';
+import 'package:fluttershow_base/components/widgets/fluttershow_base_components.dart';
+import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_base/fluttershow_base.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
@@ -49,23 +50,15 @@ class KeynoteBulletsSlide extends StatelessWidget {
               bulletPointsWidgetReplacement ??
                   Align(
                     alignment: bulletPointsAlignment ?? Alignment.topCenter,
-                    child: animationIndex != null
-                        ? AnimatableListText(
-                            texts: bulletPoints,
-                            animationIndex: animationIndex ?? 0,
-                            textAlign: bulletTextAlignment ?? TextAlign.left,
-                            bullet: bullets ?? ListBullets.circle,
-                            style: bulletTextStyle,
-                            padding: bulletPointsPadding,
-                            animationArguments: animationArguments,
-                          )
-                        : ListText(
-                            texts: bulletPoints,
-                            textAlign: bulletTextAlignment ?? TextAlign.left,
-                            bullet: bullets ?? ListBullets.circle,
-                            style: bulletTextStyle ?? KeynoteTextstyles.body(),
-                            padding: bulletPointsPadding,
-                          ),
+                    child: ListText(
+                      texts: bulletPoints,
+                      textAlign: bulletTextAlignment ?? TextAlign.left,
+                      bullet: bullets ?? ListBullets.circle,
+                      style: bulletTextStyle ?? KeynoteTextstyles.body(),
+                      padding: bulletPointsPadding,
+                      animationArguments: animationArguments,
+                      animationIndex: animationIndex ?? 0,
+                    ),
                   ),
               flexUnits: footerFlexUnits ?? 6,
             ),
