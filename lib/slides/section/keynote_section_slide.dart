@@ -7,20 +7,20 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
 class KeynoteSectionSlide extends StatelessWidget {
   const KeynoteSectionSlide({
-    required this.title,
-    this.titleTextStyle,
-    this.titleAlignment,
-    this.titleGradient,
+    required this.sectionText,
+    this.sectionTextStyle,
+    this.sectionAlignment,
+    this.sectionGradient,
     this.padding,
     this.sectionTitleReplacementWidget,
     super.key,
   });
 
-  final String title;
+  final String sectionText;
 
-  final Gradient? titleGradient;
-  final TextStyle? titleTextStyle;
-  final Alignment? titleAlignment;
+  final Gradient? sectionGradient;
+  final TextStyle? sectionTextStyle;
+  final Alignment? sectionAlignment;
 
   final EdgeInsets? padding;
 
@@ -35,19 +35,19 @@ class KeynoteSectionSlide extends StatelessWidget {
             LayoutBody(
               sectionTitleReplacementWidget ??
                   Align(
-                    alignment: titleAlignment ?? Alignment.center,
-                    child: titleGradient != null
+                    alignment: sectionAlignment ?? Alignment.center,
+                    child: sectionGradient != null
                         ? GradientText(
-                            title,
-                            gradient: titleGradient ??
+                            sectionText,
+                            gradient: sectionGradient ??
                                 KeynoteGradients.sectionTitleGradient,
                             style:
-                                titleTextStyle ?? KeynoteTextstyles.section(),
+                                sectionTextStyle ?? KeynoteTextstyles.section(),
                           )
                         : Text(
-                            title,
+                            sectionText,
                             style:
-                                titleTextStyle ?? KeynoteTextstyles.section(),
+                                sectionTextStyle ?? KeynoteTextstyles.section(),
                           ),
                   ),
             ),
