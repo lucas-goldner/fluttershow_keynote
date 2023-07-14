@@ -14,7 +14,7 @@ void main() {
           home: Scaffold(
             body: KeynoteTitleAndPhotoAltSlide(
               titleText: titleText,
-              subtitleText: subTitleText,
+              subTitleText: subTitleText,
               image: Placeholder(),
             ),
           ),
@@ -24,11 +24,11 @@ void main() {
       final keynoteTitleAndPhotoAltSlideFinder =
           find.byType(KeynoteTitleAndPhotoAltSlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoAltSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
 
       final keynoteTitleSlideWidget =
@@ -36,7 +36,7 @@ void main() {
         keynoteTitleAndPhotoAltSlideFinder,
       );
       expect(keynoteTitleSlideWidget.titleText, titleText);
-      expect(keynoteTitleSlideWidget.subtitleText, subTitleText);
+      expect(keynoteTitleSlideWidget.subTitleText, subTitleText);
     });
 
     testWidgets('test render with for variant one default properties',
@@ -46,7 +46,7 @@ void main() {
           home: Scaffold(
             body: KeynoteTitleAndPhotoAltSlideVariants.variantOne(
               titleText: titleText,
-              subtitleText: subTitleText,
+              subTitleText: subTitleText,
               image: const Placeholder(),
             ),
           ),
@@ -56,11 +56,11 @@ void main() {
       final keynoteTitleAndPhotoAltSlideFinder =
           find.byType(KeynoteTitleAndPhotoAltSlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoAltSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
 
       final keynoteTitleSlideWidget =
@@ -68,7 +68,7 @@ void main() {
         keynoteTitleAndPhotoAltSlideFinder,
       );
       expect(keynoteTitleSlideWidget.titleText, titleText);
-      expect(keynoteTitleSlideWidget.subtitleText, subTitleText);
+      expect(keynoteTitleSlideWidget.subTitleText, subTitleText);
     });
 
     testWidgets('test render with for variant two default properties',
@@ -78,7 +78,7 @@ void main() {
           home: Scaffold(
             body: KeynoteTitleAndPhotoAltSlideVariants.variantTwo(
               titleText: titleText,
-              subtitleText: subTitleText,
+              subTitleText: subTitleText,
               image: const Placeholder(),
             ),
           ),
@@ -88,11 +88,11 @@ void main() {
       final keynoteTitleAndPhotoAltSlideFinder =
           find.byType(KeynoteTitleAndPhotoAltSlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoAltSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
 
       final keynoteTitleSlideWidget =
@@ -100,7 +100,7 @@ void main() {
         keynoteTitleAndPhotoAltSlideFinder,
       );
       expect(keynoteTitleSlideWidget.titleText, titleText);
-      expect(keynoteTitleSlideWidget.subtitleText, subTitleText);
+      expect(keynoteTitleSlideWidget.subTitleText, subTitleText);
     });
 
     testWidgets('test render with replacement widgets', (tester) async {
@@ -109,7 +109,7 @@ void main() {
           home: Scaffold(
             body: KeynoteTitleAndPhotoAltSlide(
               titleText: titleText,
-              subtitleText: subTitleText,
+              subTitleText: subTitleText,
               image: const Placeholder(),
               titleWidgetReplacement: Container(key: const Key('Title')),
               subtitleWidgetReplacement: Container(key: const Key('Subtitle')),
@@ -120,10 +120,10 @@ void main() {
       );
 
       final textFinder = find.byKey(const Key('Title'));
-      final subtitleTextFinder = find.byKey(const Key('Subtitle'));
+      final subTitleTextFinder = find.byKey(const Key('Subtitle'));
       final imageFinder = find.byKey(const Key('Image'));
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
     });
   });
@@ -135,7 +135,7 @@ void main() {
             home: Scaffold(
               body: KeynoteTitleAndPhotoAltSlide(
                 titleText: titleText,
-                subtitleText: subTitleText,
+                subTitleText: subTitleText,
                 image: const Placeholder(),
                 animationIndex: animationIndex,
               ),
@@ -147,25 +147,25 @@ void main() {
       final keynoteTitleAndPhotoAltSlideFinder =
           find.byType(KeynoteTitleAndPhotoAltSlide);
       final titleTextFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoAltSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
       expect(imageFinder, findsNothing);
 
       await tester.pumpWidget(repumpWithAnimationIndex(1));
 
       expect(keynoteTitleAndPhotoAltSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsNothing);
 
       await tester.pumpWidget(repumpWithAnimationIndex(2));
 
       expect(keynoteTitleAndPhotoAltSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
     });
   });

@@ -29,12 +29,12 @@ void main() {
       final keynoteTitleAndPhotoSlideFinder =
           find.byType(KeynoteTitleAndPhotoSlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final headingTextFinder = find.text(headingText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(headingTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
 
@@ -65,12 +65,12 @@ void main() {
       final keynoteTitleAndPhotoSlideFinder =
           find.byType(KeynoteTitleAndPhotoSlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final headingTextFinder = find.text(headingText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(headingTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
 
@@ -110,12 +110,12 @@ void main() {
       final keynoteTitleAndPhotoSlideFinder =
           find.byType(KeynoteTitleAndPhotoSlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final headingTextFinder = find.text(headingText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(textFinder, findsNothing);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
       expect(headingTextFinder, findsNothing);
       expect(imageFinder, findsNothing);
 
@@ -152,12 +152,12 @@ void main() {
       final keynoteTitleAndPhotoSlideFinder =
           find.byType(KeynoteTitleAndPhotoSlide);
       final titleTextFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final headingTextFinder = find.text(headingText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
       expect(imageFinder, findsOneWidget);
       expect(headingTextFinder, findsNothing);
 
@@ -165,7 +165,7 @@ void main() {
 
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
       expect(headingTextFinder, findsNothing);
 
@@ -173,7 +173,7 @@ void main() {
 
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
       expect(headingTextFinder, findsOneWidget);
     });
@@ -198,12 +198,12 @@ void main() {
       final keynoteTitleAndPhotoSlideFinder =
           find.byType(KeynoteTitleAndPhotoSlide);
       final titleTextFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final headingTextFinder = find.text(headingText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsNothing);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
       expect(imageFinder, findsOneWidget);
       expect(headingTextFinder, findsOneWidget);
 
@@ -211,7 +211,7 @@ void main() {
 
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
       expect(imageFinder, findsOneWidget);
       expect(headingTextFinder, findsOneWidget);
 
@@ -219,7 +219,7 @@ void main() {
 
       expect(keynoteTitleAndPhotoSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
       expect(headingTextFinder, findsOneWidget);
     });

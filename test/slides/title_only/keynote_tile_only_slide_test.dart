@@ -44,10 +44,10 @@ void main() {
 
       final keynoteTitleOnlySlideFinder = find.byType(KeynoteTitleOnlySlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       expect(keynoteTitleOnlySlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       final keynoteTitleSlideWidget =
           tester.widget<KeynoteTitleOnlySlide>(keynoteTitleOnlySlideFinder);
       expect(keynoteTitleSlideWidget.titleText, titleText);
@@ -69,10 +69,10 @@ void main() {
 
       final keynoteTitleOnlySlideFinder = find.byType(KeynoteTitleOnlySlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       expect(keynoteTitleOnlySlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       final keynoteTitleSlideWidget =
           tester.widget<KeynoteTitleOnlySlide>(keynoteTitleOnlySlideFinder);
       expect(keynoteTitleSlideWidget.titleText, titleText);
@@ -123,10 +123,10 @@ void main() {
 
       final keynoteTitleOnlySlideFinder = find.byType(KeynoteTitleOnlySlide);
       final titleTextFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       expect(keynoteTitleOnlySlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
 
       await tester.pumpWidget(
         const MaterialApp(
@@ -142,7 +142,7 @@ void main() {
 
       expect(keynoteTitleOnlySlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
     });
   });
 }

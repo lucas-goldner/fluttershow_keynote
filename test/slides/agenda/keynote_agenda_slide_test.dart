@@ -43,8 +43,8 @@ void main() {
       expect(keynoteAgendaSlideFinder, findsOneWidget);
       final titleTextFinder = find.text(title);
       expect(titleTextFinder, findsOneWidget);
-      final subtitleTextFinder = find.text(subTitle);
-      expect(subtitleTextFinder, findsOneWidget);
+      final subTitleTextFinder = find.text(subTitle);
+      expect(subTitleTextFinder, findsOneWidget);
       final footerWidgetFinder = find.byKey(const Key('Footer'));
       expect(footerWidgetFinder, findsOneWidget);
     });
@@ -71,8 +71,8 @@ void main() {
       expect(keynoteAgendaSlideFinder, findsOneWidget);
       final titleTextFinder = find.text(title);
       expect(titleTextFinder, findsNothing);
-      final subtitleTextFinder = find.text(subTitle);
-      expect(subtitleTextFinder, findsNothing);
+      final subTitleTextFinder = find.text(subTitle);
+      expect(subTitleTextFinder, findsNothing);
       final titleReplacementWidgetFinder = find.byKey(const Key('Title'));
       expect(titleReplacementWidgetFinder, findsOneWidget);
       final subtitleReplacementWidgetFinder = find.byKey(const Key('Subtitle'));

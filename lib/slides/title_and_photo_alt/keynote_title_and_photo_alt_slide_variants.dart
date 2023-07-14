@@ -7,7 +7,7 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 class KeynoteTitleAndPhotoAltSlideVariants {
   static KeynoteTitleAndPhotoAltSlide variantOne({
     required String titleText,
-    required String subtitleText,
+    required String subTitleText,
     required Widget image,
     int? animationIndex,
     AnimationArguments? animationArguments,
@@ -15,7 +15,7 @@ class KeynoteTitleAndPhotoAltSlideVariants {
       KeynoteTitleAndPhotoAltSlide(
         image: image,
         titleText: titleText,
-        subtitleText: subtitleText,
+        subTitleText: subTitleText,
         titleStyle: KeynoteTextstyles.titleSmall(),
         subtitleStyle: KeynoteTextstyles.subtitle(),
         animationIndex: animationIndex,
@@ -24,7 +24,7 @@ class KeynoteTitleAndPhotoAltSlideVariants {
 
   static KeynoteTitleAndPhotoAltSlide variantTwo({
     required String titleText,
-    required String subtitleText,
+    required String subTitleText,
     required Widget image,
     int? animationIndex,
     AnimationArguments? animationArguments,
@@ -32,7 +32,7 @@ class KeynoteTitleAndPhotoAltSlideVariants {
       KeynoteTitleAndPhotoAltSlide(
         image: image,
         titleText: titleText,
-        subtitleText: subtitleText,
+        subTitleText: subTitleText,
         titleAlignment: Alignment.bottomLeft,
         subtitleAlignment: Alignment.topLeft,
         padding: allPadding48,

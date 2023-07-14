@@ -140,11 +140,11 @@ void main() {
 
       final keynoteTitleSlideFinder = find.byType(KeynoteTitleSlide);
       final titleTextFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final footerTextFinder = find.text(footerText);
       expect(keynoteTitleSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
       expect(footerTextFinder, findsNothing);
 
       await tester.pumpWidget(
@@ -162,7 +162,7 @@ void main() {
 
       expect(keynoteTitleSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(footerTextFinder, findsNothing);
 
       await tester.pumpWidget(
@@ -180,7 +180,7 @@ void main() {
 
       expect(keynoteTitleSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(footerTextFinder, findsOneWidget);
     });
   });

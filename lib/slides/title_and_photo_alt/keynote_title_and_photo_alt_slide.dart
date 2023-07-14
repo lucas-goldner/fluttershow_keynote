@@ -8,7 +8,7 @@ import 'package:fluttershow_base/fluttershow_base.dart';
 class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
   const KeynoteTitleAndPhotoAltSlide({
     required this.titleText,
-    required this.subtitleText,
+    required this.subTitleText,
     required this.image,
     this.titleStyle,
     this.subtitleStyle,
@@ -26,7 +26,7 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
 
   final Widget image;
   final String titleText;
-  final String subtitleText;
+  final String subTitleText;
 
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
@@ -74,7 +74,7 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
                           Align(
                             alignment: subtitleAlignment ?? Alignment.topCenter,
                             child: Text(
-                              subtitleText,
+                              subTitleText,
                               style: subtitleStyle,
                             ),
                           ),

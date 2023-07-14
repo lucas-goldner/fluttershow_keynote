@@ -45,10 +45,10 @@ void main() {
       final keynoteBigFactSlideFinder = find.byType(KeynoteBigFactSlide);
       final gradientFinder = find.byType(GradientText);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(gradientFinder, findsOneWidget);
     });
 
@@ -67,10 +67,10 @@ void main() {
 
       final keynoteBigFactSlideFinder = find.byType(KeynoteBigFactSlide);
       final textFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
     });
     testWidgets('test render with replacement widgets', (tester) async {
       await tester.pumpWidget(
@@ -117,10 +117,10 @@ void main() {
 
       final keynoteBigFactSlideFinder = find.byType(KeynoteBigFactSlide);
       final titleTextFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
 
       await tester.pumpWidget(
         const MaterialApp(
@@ -136,7 +136,7 @@ void main() {
 
       expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
     });
   });
 }

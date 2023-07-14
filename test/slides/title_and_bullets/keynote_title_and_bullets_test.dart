@@ -165,15 +165,15 @@ void main() {
       final keynoteTitleAndBulletSlideFinder =
           find.byType(KeynoteTitleAndBulletsSlide);
       final titleTextFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       expect(keynoteTitleAndBulletSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
 
       await repumpWithAnimationIndex(1);
 
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
 
       await repumpWithAnimationIndex(2);
 
@@ -184,7 +184,7 @@ void main() {
       await repumpWithAnimationIndex(3);
 
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(bulletPointOneFinder, findsOneWidget);
 
       final bulletPointTwoFinder =
@@ -194,7 +194,7 @@ void main() {
       await repumpWithAnimationIndex(4);
 
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(bulletPointOneFinder, findsOneWidget);
 
       final bulletPointThreeFinder =

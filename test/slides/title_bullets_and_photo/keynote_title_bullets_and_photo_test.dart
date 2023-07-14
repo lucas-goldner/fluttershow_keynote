@@ -34,7 +34,8 @@ void main() {
 
       final keynoteTitleSlideWidget =
           tester.widget<KeynoteTitleBulletAndPhotoSlide>(
-              keynoteTitleBulletAndPhotoSlideFinder);
+        keynoteTitleBulletAndPhotoSlideFinder,
+      );
       expect(keynoteTitleSlideWidget.titleText, titleText);
       expect(keynoteTitleSlideWidget.subTitleText, subTitleText);
       expect(keynoteTitleSlideWidget.bulletPoints, bulletPoints);
@@ -72,7 +73,8 @@ void main() {
 
       final keynoteTitleSlideWidget =
           tester.widget<KeynoteTitleBulletAndPhotoSlide>(
-              keynoteTitleBulletAndPhotoSlideFinder);
+        keynoteTitleBulletAndPhotoSlideFinder,
+      );
       expect(keynoteTitleSlideWidget.titleText, titleText);
       expect(keynoteTitleSlideWidget.subTitleText, subTitleText);
       expect(keynoteTitleSlideWidget.bulletPoints, bulletPoints);
@@ -110,7 +112,8 @@ void main() {
 
       final keynoteTitleSlideWidget =
           tester.widget<KeynoteTitleBulletAndPhotoSlide>(
-              keynoteTitleBulletAndPhotoSlideFinder);
+        keynoteTitleBulletAndPhotoSlideFinder,
+      );
       expect(keynoteTitleSlideWidget.titleText, titleText);
       expect(keynoteTitleSlideWidget.subTitleText, subTitleText);
       expect(keynoteTitleSlideWidget.bulletPoints, bulletPoints);
@@ -148,7 +151,8 @@ void main() {
 
       final keynoteTitleSlideWidget =
           tester.widget<KeynoteTitleBulletAndPhotoSlide>(
-              keynoteTitleBulletAndPhotoSlideFinder);
+        keynoteTitleBulletAndPhotoSlideFinder,
+      );
       expect(keynoteTitleSlideWidget.titleText, titleText);
       expect(keynoteTitleSlideWidget.subTitleText, subTitleText);
       expect(keynoteTitleSlideWidget.bulletPoints, bulletPoints);
@@ -214,29 +218,29 @@ void main() {
       final keynoteTitleBulletAndPhotoSlideFinder =
           find.byType(KeynoteTitleBulletAndPhotoSlide);
       final titleTextFinder = find.text(titleText);
-      final subtitleTextFinder = find.text(subTitleText);
+      final subTitleTextFinder = find.text(subTitleText);
       final imageFinder = find.byType(Placeholder);
       expect(keynoteTitleBulletAndPhotoSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsNothing);
+      expect(subTitleTextFinder, findsNothing);
       expect(imageFinder, findsNothing);
 
       await repumpWithAnimationIndex(1);
 
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsNothing);
 
       await repumpWithAnimationIndex(2);
 
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
 
       await repumpWithAnimationIndex(3);
 
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
 
       final bulletPointOneFinder =
@@ -246,7 +250,7 @@ void main() {
       await repumpWithAnimationIndex(4);
 
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
       expect(bulletPointOneFinder, findsOneWidget);
 
@@ -257,7 +261,7 @@ void main() {
       await repumpWithAnimationIndex(5);
 
       expect(titleTextFinder, findsOneWidget);
-      expect(subtitleTextFinder, findsOneWidget);
+      expect(subTitleTextFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
       expect(bulletPointOneFinder, findsOneWidget);
 
