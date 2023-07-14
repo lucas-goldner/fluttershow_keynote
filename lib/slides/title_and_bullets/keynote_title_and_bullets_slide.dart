@@ -62,10 +62,8 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
   final AnimationArguments? animationArguments;
 
   int getAnimationIndices() {
-    final length = bulletPoints?.length ?? 0;
-
     if (animationIndex != null) {
-      return (animationIndex ?? 0) + 2 - length;
+      return (animationIndex ?? 0) - 2;
     }
 
     return 2;
@@ -124,7 +122,9 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
                         style: bulletTextStyle,
                         padding: bulletPointsPadding,
                         animationArguments: animationArguments,
-                        animationIndex: getAnimationIndices(),
+                        animationIndex: animationIndex != null
+                            ? getAnimationIndices()
+                            : null,
                       ),
                     ),
                 indexToShowAt: 2,

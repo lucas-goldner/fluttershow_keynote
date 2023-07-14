@@ -6,8 +6,8 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
 class KeynoteTitleBulletAndPhotoSlideVariants {
   static KeynoteTitleBulletAndPhotoSlide variantOne({
-    required String title,
-    required String subtitle,
+    required String titleText,
+    required String subTitleText,
     required Widget image,
     required List<String> bulletPoints,
     int? animationIndex,
@@ -15,8 +15,8 @@ class KeynoteTitleBulletAndPhotoSlideVariants {
   }) =>
       KeynoteTitleBulletAndPhotoSlide(
         image: image,
-        title: title,
-        subtitle: subtitle,
+        titleText: titleText,
+        subTitleText: subTitleText,
         titleStyle: KeynoteTextstyles.titleSmall(),
         subtitleStyle: KeynoteTextstyles.subtitleSmall(),
         bulletTextStyle: KeynoteTextstyles.body(),
@@ -29,8 +29,8 @@ class KeynoteTitleBulletAndPhotoSlideVariants {
       );
 
   static KeynoteTitleBulletAndPhotoSlide variantTwo({
-    required String title,
-    required String subtitle,
+    required String titleText,
+    required String subTitleText,
     required Widget image,
     required List<String> bulletPoints,
     int? animationIndex,
@@ -38,8 +38,8 @@ class KeynoteTitleBulletAndPhotoSlideVariants {
   }) =>
       KeynoteTitleBulletAndPhotoSlide(
         image: image,
-        title: title,
-        subtitle: subtitle,
+        titleText: titleText,
+        subTitleText: subTitleText,
         bulletPoints: bulletPoints,
         titleAlignment: Alignment.bottomLeft,
         subtitleAlignment: Alignment.topLeft,

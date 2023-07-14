@@ -6,8 +6,8 @@ import 'package:fluttershow_base/fluttershow_base.dart';
 
 class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   const KeynoteTitleBulletAndPhotoSlide({
-    required this.title,
-    required this.subtitle,
+    required this.titleText,
+    required this.subTitleText,
     required this.image,
     required this.bulletPoints,
     this.bullets,
@@ -35,8 +35,8 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   });
 
   final Widget image;
-  final String title;
-  final String subtitle;
+  final String titleText;
+  final String subTitleText;
   final List<String> bulletPoints;
   final ListBullets? bullets;
 
@@ -66,13 +66,11 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   final AnimationArguments? animationArguments;
 
   int getAnimationIndices() {
-    final length = bulletPoints.length;
-
     if (animationIndex != null) {
-      return (animationIndex ?? 0) + 2 - length;
+      return (animationIndex ?? 0) - 3;
     }
 
-    return 2;
+    return 3;
   }
 
   @override
@@ -89,7 +87,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
                           Align(
                             alignment: titleAlignment ?? Alignment.bottomCenter,
                             child: Text(
-                              title,
+                              titleText,
                               style: titleStyle,
                             ),
                           ),
@@ -106,7 +104,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
                           Align(
                             alignment: subtitleAlignment ?? Alignment.topCenter,
                             child: Text(
-                              subtitle,
+                              subTitleText,
                               style: subtitleStyle,
                             ),
                           ),
@@ -128,11 +126,13 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
                               bullet: bullets ?? ListBullets.circle,
                               style: bulletTextStyle,
                               padding: bulletPointsPadding,
-                              animationIndex: getAnimationIndices(),
+                              animationIndex: animationIndex != null
+                                  ? getAnimationIndices()
+                                  : null,
                               animationArguments: animationArguments,
                             ),
                           ),
-                      indexToShowAt: 2,
+                      indexToShowAt: 3,
                       animationIndex: animationIndex,
                       animationArguments: animationArguments,
                     ),
@@ -144,7 +144,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
             Expanded(
               child: AnimatableWrapper(
                 imageWidgetReplacement ?? image,
-                indexToShowAt: bulletPoints.length + 2,
+                indexToShowAt: 2,
                 animationIndex: animationIndex,
                 animationArguments: animationArguments,
               ),
