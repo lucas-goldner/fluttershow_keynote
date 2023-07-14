@@ -4,7 +4,23 @@ import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 import 'package:fluttershow_keynote/style/keynote_gradients.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
+/// A widget that recreates the statement slide from Keynote.
+/// Consists
 class KeynoteStatementSlide extends StatelessWidget {
+  /// Constructs a KeynoteStatementSlide widget.
+  ///
+  /// [statement] is the text of the statement.
+  ///
+  /// [statementTextStyle] is the optional style for the statement text.
+  ///
+  /// [statementAlignment] is the optional alignment for the statement text.
+  ///
+  /// [statementGradient] is the optional gradient to apply to the statement.
+  ///
+  /// [padding] is the optional padding around the slide.
+  ///
+  /// [statementTitleReplacementWidget] is the optional
+  /// replacement widget for the statement.
   const KeynoteStatementSlide({
     required this.statement,
     this.statementTextStyle,
@@ -15,14 +31,22 @@ class KeynoteStatementSlide extends StatelessWidget {
     super.key,
   });
 
+  /// The text of the statement.
   final String statement;
 
+  /// The optional gradient to apply to the statement.
   final Gradient? statementGradient;
+
+  /// The optional style for the statement text.
   final TextStyle? statementTextStyle;
+
+  /// The optional alignment for the statement text.
   final Alignment? statementAlignment;
 
+  /// The optional padding around the slide.
   final EdgeInsets? padding;
 
+  /// The optional replacement widget for the statement.
   final Widget? statementTitleReplacementWidget;
 
   @override

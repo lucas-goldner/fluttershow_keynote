@@ -5,7 +5,24 @@ import 'package:fluttershow_keynote/model/enum/variants.dart';
 import 'package:fluttershow_keynote/slides/title_slide/keynote_title_slide.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
+/// Provides variants for creating instances of the [KeynoteTitleSlide].
 class KeynoteTitleSlideVariants {
+  /// Creates a variant one [KeynoteTitleSlide] with the specified parameters.
+  ///
+  /// The [titleText] represents the main title of the slide.
+  ///
+  /// The [subTitleText] represents the subtitle of the slide.
+  ///
+  /// The [footerText] represents the footer text of the slide.
+  ///
+  /// The [gradient] is an optional parameter that defines
+  /// the gradient background for the title.
+  ///
+  /// The [animationIndex] represents the index of
+  /// the slide for animation purposes.
+  ///
+  /// The [animationArguments] provide additional
+  /// animation settings for the slide.
   static KeynoteTitleSlide variantOne({
     required String titleText,
     required String subTitleText,
@@ -29,6 +46,19 @@ class KeynoteTitleSlideVariants {
         animationArguments: animationArguments,
       );
 
+  /// Creates a variant two [KeynoteTitleSlide] with the specified parameters.
+  ///
+  /// The [titleText] represents the main title of the slide.
+  ///
+  /// The [subTitleText] represents the subtitle of the slide.
+  ///
+  /// The [footerText] represents the footer text of the slide.
+  ///
+  /// The [animationIndex] represents the index of
+  /// the slide for animation purposes.
+  ///
+  /// The [animationArguments] provide additional
+  /// animation settings for the slide.
   static KeynoteTitleSlide variantTwo({
     required String titleText,
     required String subTitleText,
