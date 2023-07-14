@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fluttershow_base/components/widgets/fluttershow_base_components.dart';
 import 'package:fluttershow_keynote/slides/section/keynote_section_slide.dart';
+import 'package:fluttershow_keynote/style/keynote_gradients.dart';
 
 void main() {
   const sectionText = 'Statement';
-  const gradient = LinearGradient(colors: [Colors.red, Colors.blue]);
+  final gradient = KeynoteGradients.sectionTitleGradient;
 
   group('Property based tests', () {
     testWidgets('test render with default properties', (tester) async {
@@ -28,7 +29,7 @@ void main() {
 
     testWidgets('test render with gradient', (tester) async {
       await tester.pumpWidget(
-        const MaterialApp(
+        MaterialApp(
           home: Scaffold(
             body: KeynoteSectionSlide(
               sectionText: sectionText,

@@ -16,9 +16,9 @@ class KeynotePhoto3UpSlide extends StatelessWidget {
     super.key,
   });
 
-  final Image bigImage;
-  final Image smallImageOne;
-  final Image smallImageTwo;
+  final Widget bigImage;
+  final Widget smallImageOne;
+  final Widget smallImageTwo;
 
   final EdgeInsets? padding;
   final EdgeInsets? imagesPadding;
@@ -29,49 +29,47 @@ class KeynotePhoto3UpSlide extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Padding(
         padding: padding ?? emptyPadding,
-        child: LayoutBody(
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Flexible(
-                child: AnimatableWrapper(
-                  Padding(
-                    padding: imagesPadding ?? emptyPadding,
-                    child: bigImage,
-                  ),
-                  indexToShowAt: 0,
-                  animationIndex: animationIndex,
-                  animationArguments: animationArguments,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Flexible(
+              child: AnimatableWrapper(
+                Padding(
+                  padding: imagesPadding ?? emptyPadding,
+                  child: bigImage,
                 ),
+                indexToShowAt: 0,
+                animationIndex: animationIndex,
+                animationArguments: animationArguments,
               ),
-              Column(
-                children: [
-                  Flexible(
-                    child: AnimatableWrapper(
-                      Padding(
-                        padding: imagesPadding ?? emptyPadding,
-                        child: smallImageOne,
-                      ),
-                      indexToShowAt: 1,
-                      animationIndex: animationIndex,
-                      animationArguments: animationArguments,
+            ),
+            Column(
+              children: [
+                Flexible(
+                  child: AnimatableWrapper(
+                    Padding(
+                      padding: imagesPadding ?? emptyPadding,
+                      child: smallImageOne,
                     ),
+                    indexToShowAt: 1,
+                    animationIndex: animationIndex,
+                    animationArguments: animationArguments,
                   ),
-                  Flexible(
-                    child: AnimatableWrapper(
-                      Padding(
-                        padding: imagesPadding ?? emptyPadding,
-                        child: smallImageTwo,
-                      ),
-                      indexToShowAt: 2,
-                      animationIndex: animationIndex,
-                      animationArguments: animationArguments,
+                ),
+                Flexible(
+                  child: AnimatableWrapper(
+                    Padding(
+                      padding: imagesPadding ?? emptyPadding,
+                      child: smallImageTwo,
                     ),
+                    indexToShowAt: 2,
+                    animationIndex: animationIndex,
+                    animationArguments: animationArguments,
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       );
 }
