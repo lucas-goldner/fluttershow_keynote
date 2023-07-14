@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fluttershow_base/fluttershow_base.dart';
 import 'package:fluttershow_keynote/slides/title_bullets_and_photo/keynote_title_bullets_and_photo_slide.dart';
 import 'package:fluttershow_keynote/slides/title_bullets_and_photo/keynote_title_bullets_and_photo_slide_variants.dart';
 
@@ -8,23 +7,6 @@ void main() {
   const titleText = 'Title';
   const subTitleText = 'Subtitle';
   const bulletPoints = ['Bullet 1', 'Bullet 2', 'Bullet 3'];
-  const titleStyle = TextStyle(fontSize: 20);
-  const subtitleStyle = TextStyle(fontSize: 16);
-  const bulletTextStyle = TextStyle(fontSize: 14);
-  const titleAlignment = Alignment.bottomCenter;
-  const subtitleAlignment = Alignment.topCenter;
-  const bulletPointsAlignment = Alignment.topCenter;
-  const bulletTextAlignment = TextAlign.left;
-  const padding = EdgeInsets.all(16);
-  const bulletPointsPadding = EdgeInsets.all(8);
-  const headerFlexUnits = 2;
-  const bodyFlexUnits = 1;
-  const footerFlexUnits = 5;
-  const animationIndex = 1;
-  final animationArguments = AnimationArguments(
-    Animations.fadeAnimation,
-    delay: 500,
-  );
 
   group('Property based tests', () {
     testWidgets('test render with default properties', (tester) async {
