@@ -10,7 +10,7 @@ void main() {
 
     test('test title returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.title(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -24,7 +24,7 @@ void main() {
 
     test('test title returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.title(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -51,7 +51,7 @@ void main() {
 
     test('test titleSmall returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.titleSmall(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -64,7 +64,7 @@ void main() {
 
     test('test titleSmall returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.titleSmall(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -89,7 +89,7 @@ void main() {
 
     test('test subtitle returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.subtitle(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -102,7 +102,7 @@ void main() {
 
     test('test subtitle returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.subtitle(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -127,7 +127,7 @@ void main() {
 
     test('test subtitleSmall returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.subtitleSmall(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -140,7 +140,7 @@ void main() {
 
     test('test subtitleSmall returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.subtitleSmall(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -166,7 +166,7 @@ void main() {
 
     test('test footer returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.footer(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -179,7 +179,7 @@ void main() {
 
     test('test footer returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.footer(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -204,7 +204,7 @@ void main() {
 
     test('test heading returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.heading(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -217,7 +217,7 @@ void main() {
 
     test('test heading returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.heading(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -242,7 +242,7 @@ void main() {
 
     test('test body returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.body(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -255,7 +255,7 @@ void main() {
 
     test('test body returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.body(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -280,7 +280,7 @@ void main() {
 
     test('test section returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.section(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -293,7 +293,7 @@ void main() {
 
     test('test section returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.section(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -318,7 +318,7 @@ void main() {
 
     test('test statement returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.statement(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -331,7 +331,7 @@ void main() {
 
     test('test statement returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.statement(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -356,7 +356,7 @@ void main() {
 
     test('test fact returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.fact(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -369,7 +369,7 @@ void main() {
 
     test('test fact returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.fact(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -396,7 +396,7 @@ void main() {
 
     test('test quote returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.quote(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -409,7 +409,7 @@ void main() {
 
     test('test quote returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.quote(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -434,7 +434,7 @@ void main() {
 
     test('test attribution returns correct TextStyle for variantOne', () {
       final textStyle = KeynoteTextstyles.attribution(
-        variant: Variants.variantOne,
+        variant: Variants.one,
         color: testColor,
         fontSize: testFontSize,
       );
@@ -447,7 +447,7 @@ void main() {
 
     test('test attribution returns correct TextStyle for variantTwo', () {
       final textStyle = KeynoteTextstyles.attribution(
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         color: testColor,
         fontSize: testFontSize,
       );

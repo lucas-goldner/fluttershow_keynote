@@ -26,9 +26,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _titleVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _titleVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _titleVariantOne(color: color, fontSize: fontSize);
@@ -41,9 +41,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _titleVariantOne(color: color, fontSize: fontSize ?? 84);
-      case Variants.variantTwo:
+      case Variants.two:
         return _titleVariantTwo(color: color, fontSize: fontSize ?? 85);
       case _:
         return _titleVariantOne(color: color, fontSize: fontSize ?? 84);
@@ -72,9 +72,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _subtitleVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _subtitleVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _subtitleVariantOne(color: color, fontSize: fontSize);
@@ -87,9 +87,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _subtitleVariantOne(color: color, fontSize: fontSize ?? 54);
-      case Variants.variantTwo:
+      case Variants.two:
         return _subtitleVariantTwo(color: color, fontSize: fontSize ?? 54);
       case _:
         return _subtitleVariantOne(color: color, fontSize: fontSize ?? 54);
@@ -118,9 +118,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _footerVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _footerVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _footerVariantOne(color: color, fontSize: fontSize);
@@ -149,9 +149,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _headingVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _headingVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _headingVariantOne(color: color, fontSize: fontSize);
@@ -180,9 +180,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _bodyVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _bodyVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _bodyVariantOne(color: color, fontSize: fontSize);
@@ -214,9 +214,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _sectionVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _sectionVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _sectionVariantOne(color: color, fontSize: fontSize);
@@ -260,9 +260,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _factVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _factVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _factVariantOne(color: color, fontSize: fontSize);
@@ -294,9 +294,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _quoteVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _quoteVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _quoteVariantOne(color: color, fontSize: fontSize);
@@ -328,9 +328,9 @@ class KeynoteTextstyles {
     double? fontSize,
   }) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _attributionVariantOne(color: color, fontSize: fontSize);
-      case Variants.variantTwo:
+      case Variants.two:
         return _attributionVariantTwo(color: color, fontSize: fontSize);
       case _:
         return _attributionVariantOne(color: color, fontSize: fontSize);

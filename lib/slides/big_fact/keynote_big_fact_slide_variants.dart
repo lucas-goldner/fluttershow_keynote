@@ -31,8 +31,8 @@ class KeynoteBigFactSlideVariants {
       KeynoteBigFactSlide(
         titleText: titleText,
         subTitleText: subTitleText,
-        titleStyle: KeynoteTextstyles.fact(variant: Variants.variantTwo),
-        subtitleStyle: KeynoteTextstyles.subtitle(variant: Variants.variantTwo),
+        titleStyle: KeynoteTextstyles.fact(variant: Variants.two),
+        subtitleStyle: KeynoteTextstyles.subtitle(variant: Variants.two),
         animationIndex: animationIndex,
         animationArguments: animationArguments,
       );

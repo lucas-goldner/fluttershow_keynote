@@ -214,9 +214,9 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (variant) {
-      case Variants.variantOne:
+      case Variants.one:
         return _variantOne();
-      case Variants.variantTwo:
+      case Variants.two:
         return _variantTwo();
       case _:
         return _variantOne();

@@ -3,10 +3,10 @@ import 'package:fluttershow_keynote/model/enum/variants.dart';
 
 void main() {
   test('test variantOne has the correct variant value', () {
-    expect(Variants.variantOne.variant, equals(1));
+    expect(Variants.one.variant, equals(1));
   });
 
   test('test variantTwo has the correct variant value', () {
-    expect(Variants.variantTwo.variant, equals(2));
+    expect(Variants.two.variant, equals(2));
   });
 }

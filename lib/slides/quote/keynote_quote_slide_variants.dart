@@ -36,9 +36,8 @@ class KeynoteQuoteSlideVariants {
       KeynoteQuoteSlide(
         quoteText: quoteText,
         attributionText: attributionText,
-        quoteStyle: KeynoteTextstyles.quote(variant: Variants.variantTwo),
-        attributionStyle:
-            KeynoteTextstyles.attribution(variant: Variants.variantTwo),
+        quoteStyle: KeynoteTextstyles.quote(variant: Variants.two),
+        attributionStyle: KeynoteTextstyles.attribution(variant: Variants.two),
         quoteAlignment: Alignment.bottomLeft,
         attributionAlignment: Alignment.centerLeft,
         headerFlexUnits: 3,

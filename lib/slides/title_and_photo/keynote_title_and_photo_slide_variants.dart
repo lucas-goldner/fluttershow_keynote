@@ -26,7 +26,7 @@ class KeynoteTitleAndPhotoSlideVariants {
         subtitleAlignment: Alignment.topCenter,
         headingAlignment: Alignment.bottomCenter,
         image: image,
-        variant: Variants.variantOne,
+        variant: Variants.one,
         animationIndex: animationIndex,
         animationArguments: animationArguments,
       );
@@ -50,7 +50,7 @@ class KeynoteTitleAndPhotoSlideVariants {
         subtitleAlignment: Alignment.topLeft,
         headingAlignment: Alignment.topLeft,
         image: image,
-        variant: Variants.variantTwo,
+        variant: Variants.two,
         animationIndex: animationIndex,
         animationArguments: animationArguments,
       );
