@@ -18,12 +18,12 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteSectionSlide);
+      final keynoteSectionSlideFinder = find.byType(KeynoteSectionSlide);
       final textFinder = find.text(sectionText);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteSectionSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
       final keynoteTitleSlideWidget =
-          tester.widget<KeynoteSectionSlide>(keynoteTitleSlideFinder);
+          tester.widget<KeynoteSectionSlide>(keynoteSectionSlideFinder);
       expect(keynoteTitleSlideWidget.sectionText, sectionText);
     });
 
@@ -39,14 +39,14 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteSectionSlide);
+      final keynoteSectionSlideFinder = find.byType(KeynoteSectionSlide);
       final gradientFinder = find.byType(GradientText);
       final textFinder = find.text(sectionText);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteSectionSlideFinder, findsOneWidget);
       expect(gradientFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
       final keynoteTitleSlideWidget =
-          tester.widget<KeynoteSectionSlide>(keynoteTitleSlideFinder);
+          tester.widget<KeynoteSectionSlide>(keynoteSectionSlideFinder);
       expect(keynoteTitleSlideWidget.sectionText, sectionText);
     });
 
@@ -64,11 +64,11 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteSectionSlide);
+      final keynoteSectionSlideFinder = find.byType(KeynoteSectionSlide);
       final textFinder = find.text(sectionText);
       final statementReplacement = find.byKey(const Key('Section'));
 
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteSectionSlideFinder, findsOneWidget);
       expect(textFinder, findsNothing);
       expect(statementReplacement, findsOneWidget);
     });

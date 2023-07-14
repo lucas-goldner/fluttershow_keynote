@@ -20,8 +20,8 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteAgendaSlide);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      final keynoteAgendaSlideFinder = find.byType(KeynoteAgendaSlide);
+      expect(keynoteAgendaSlideFinder, findsOneWidget);
     });
 
     testWidgets('test render with footer widget', (tester) async {
@@ -39,8 +39,8 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteAgendaSlide);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      final keynoteAgendaSlideFinder = find.byType(KeynoteAgendaSlide);
+      expect(keynoteAgendaSlideFinder, findsOneWidget);
       final titleTextFinder = find.text(title);
       expect(titleTextFinder, findsOneWidget);
       final subtitleTextFinder = find.text(subTitle);
@@ -67,8 +67,8 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteAgendaSlide);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      final keynoteAgendaSlideFinder = find.byType(KeynoteAgendaSlide);
+      expect(keynoteAgendaSlideFinder, findsOneWidget);
       final titleTextFinder = find.text(title);
       expect(titleTextFinder, findsNothing);
       final subtitleTextFinder = find.text(subTitle);
@@ -99,8 +99,8 @@ void main() {
 
       await repumpWithAnimationIndex(0);
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteAgendaSlide);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      final keynoteAgendaSlideFinder = find.byType(KeynoteAgendaSlide);
+      expect(keynoteAgendaSlideFinder, findsOneWidget);
       final headerWidgetFinder = find.text(title);
       final bodyWidgetFinder = find.text(subTitle);
       expect(headerWidgetFinder, findsOneWidget);

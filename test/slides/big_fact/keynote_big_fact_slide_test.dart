@@ -22,9 +22,9 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteBigFactSlide);
+      final keynoteBigFactSlideFinder = find.byType(KeynoteBigFactSlide);
       final textFinder = find.text(titleText);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
     });
 
@@ -42,11 +42,11 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteBigFactSlide);
+      final keynoteBigFactSlideFinder = find.byType(KeynoteBigFactSlide);
       final gradientFinder = find.byType(GradientText);
       final textFinder = find.text(titleText);
       final subtitleTextFinder = find.text(subTitleText);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
       expect(subtitleTextFinder, findsOneWidget);
       expect(gradientFinder, findsOneWidget);
@@ -65,10 +65,10 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteBigFactSlide);
+      final keynoteBigFactSlideFinder = find.byType(KeynoteBigFactSlide);
       final textFinder = find.text(titleText);
       final subtitleTextFinder = find.text(subTitleText);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(textFinder, findsOneWidget);
       expect(subtitleTextFinder, findsOneWidget);
     });
@@ -89,11 +89,11 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteBigFactSlide);
+      final keynoteBigFactSlideFinder = find.byType(KeynoteBigFactSlide);
       final textFinder = find.text(titleText);
       final titleReplacement = find.byKey(const Key('Title'));
       final subtitleReplacement = find.byKey(const Key('Subtitle'));
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(textFinder, findsNothing);
       expect(titleReplacement, findsOneWidget);
       expect(subtitleReplacement, findsOneWidget);
@@ -115,10 +115,10 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteBigFactSlide);
+      final keynoteBigFactSlideFinder = find.byType(KeynoteBigFactSlide);
       final titleTextFinder = find.text(titleText);
       final subtitleTextFinder = find.text(subTitleText);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
       expect(subtitleTextFinder, findsNothing);
 
@@ -134,7 +134,7 @@ void main() {
         ),
       );
 
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteBigFactSlideFinder, findsOneWidget);
       expect(titleTextFinder, findsOneWidget);
       expect(subtitleTextFinder, findsOneWidget);
     });

@@ -17,8 +17,8 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteBulletsSlide);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      final keynoteBulletsSlideFinder = find.byType(KeynoteBulletsSlide);
+      expect(keynoteBulletsSlideFinder, findsOneWidget);
 
       for (final bulletPoint in bulletPoints) {
         final textFinder = find
@@ -68,8 +68,8 @@ void main() {
 
       await repumpWithAnimationIndex(0);
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteBulletsSlide);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      final keynoteBulletsSlideFinder = find.byType(KeynoteBulletsSlide);
+      expect(keynoteBulletsSlideFinder, findsOneWidget);
       final bulletPointOneFinder =
           find.byKey(const Key('DefaultAnimatedListTextItem-${0}'));
       expect(bulletPointOneFinder, findsOneWidget);

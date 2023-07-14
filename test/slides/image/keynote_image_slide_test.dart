@@ -19,9 +19,9 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteImageSlide);
+      final keynoteImageSlideFinder = find.byType(KeynoteImageSlide);
       final imageFinder = find.byKey(const Key('Image'));
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteImageSlideFinder, findsOneWidget);
       expect(imageFinder, findsOneWidget);
     });
   });

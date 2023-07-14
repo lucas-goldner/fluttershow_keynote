@@ -27,11 +27,11 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynotePhoto3UpSlide);
+      final keynotePhoto3UpSlideFinder = find.byType(KeynotePhoto3UpSlide);
       final bigImageFinder = find.byKey(const Key('bigImage'));
       final smallImageOneFinder = find.byKey(const Key('imageSmallOne'));
       final smallImageTwoFinder = find.byKey(const Key('imageSmallTwo'));
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynotePhoto3UpSlideFinder, findsOneWidget);
 
       expect(bigImageFinder, findsOneWidget);
       expect(smallImageOneFinder, findsOneWidget);

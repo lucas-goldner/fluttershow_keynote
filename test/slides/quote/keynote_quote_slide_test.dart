@@ -22,13 +22,13 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteQuoteSlide);
+      final keynoteQuoteSlideFinder = find.byType(KeynoteQuoteSlide);
       final quoteFinder = find.text(quoteText);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteQuoteSlideFinder, findsOneWidget);
       expect(quoteFinder, findsOneWidget);
 
       final keynoteTitleSlideWidget =
-          tester.widget<KeynoteQuoteSlide>(keynoteTitleSlideFinder);
+          tester.widget<KeynoteQuoteSlide>(keynoteQuoteSlideFinder);
       expect(keynoteTitleSlideWidget.quoteText, quoteText);
     });
 
@@ -44,10 +44,10 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteQuoteSlide);
+      final keynoteQuoteSlideFinder = find.byType(KeynoteQuoteSlide);
       final quoteFinder = find.text(quoteText);
       final attributionFinder = find.text(attribution);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteQuoteSlideFinder, findsOneWidget);
       expect(quoteFinder, findsOneWidget);
       expect(attributionFinder, findsOneWidget);
     });
@@ -65,11 +65,11 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteQuoteSlide);
+      final keynoteQuoteSlideFinder = find.byType(KeynoteQuoteSlide);
       final gradientFinder = find.byType(GradientText);
       final quoteFinder = find.text(quoteText);
       final attributionFinder = find.text(attribution);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteQuoteSlideFinder, findsOneWidget);
       expect(quoteFinder, findsOneWidget);
       expect(attributionFinder, findsOneWidget);
       expect(gradientFinder, findsOneWidget);
@@ -93,12 +93,12 @@ void main() {
         ),
       );
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteQuoteSlide);
+      final keynoteQuoteSlideFinder = find.byType(KeynoteQuoteSlide);
       final quoteFinder = find.text(quoteText);
       final attributionFinder = find.text(attribution);
       final quoteReplacementFinder = find.byKey(const Key('Quote'));
       final attributionReplacementFinder = find.byKey(const Key('Attribution'));
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteQuoteSlideFinder, findsOneWidget);
       expect(quoteFinder, findsNothing);
       expect(attributionFinder, findsNothing);
       expect(quoteReplacementFinder, findsOneWidget);
@@ -124,10 +124,10 @@ void main() {
 
       await repumpWithAnimationIndex(0);
 
-      final keynoteTitleSlideFinder = find.byType(KeynoteQuoteSlide);
+      final keynoteQuoteSlideFinder = find.byType(KeynoteQuoteSlide);
       final quoteTextFinder = find.text(quoteText);
       final attributonTextFinder = find.text(attribution);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
+      expect(keynoteQuoteSlideFinder, findsOneWidget);
       expect(quoteTextFinder, findsOneWidget);
       expect(attributonTextFinder, findsNothing);
 
