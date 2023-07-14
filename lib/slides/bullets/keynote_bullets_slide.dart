@@ -42,9 +42,8 @@ class KeynoteBulletsSlide extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            LayoutHeader(
-              const SizedBox.shrink(),
-              flexUnits: 3,
+            const Spacer(
+              flex: 3,
             ),
             LayoutFooter(
               bulletPointsWidgetReplacement ??
@@ -57,7 +56,7 @@ class KeynoteBulletsSlide extends StatelessWidget {
                       style: bulletTextStyle ?? KeynoteTextstyles.body(),
                       padding: bulletPointsPadding,
                       animationArguments: animationArguments,
-                      animationIndex: animationIndex ?? 0,
+                      animationIndex: animationIndex,
                     ),
                   ),
               flexUnits: footerFlexUnits ?? 6,

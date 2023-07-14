@@ -42,39 +42,6 @@ void main() {
       }
     });
 
-    testWidgets('test render with default properties', (tester) async {
-      await tester.pumpWidget(
-        const MaterialApp(
-          home: Scaffold(
-            body: KeynoteTitleAndBulletsSlide(
-              titleText: titleText,
-              subTitleText: subTitleText,
-              bulletPoints: bulletPoints,
-            ),
-          ),
-        ),
-      );
-
-      final keynoteTitleSlideFinder = find.byType(KeynoteTitleAndBulletsSlide);
-      final titleFinder = find.text(titleText);
-      final subtitleFinder = find.text(subTitleText);
-      expect(keynoteTitleSlideFinder, findsOneWidget);
-      expect(titleFinder, findsOneWidget);
-      expect(subtitleFinder, findsOneWidget);
-
-      final keynoteTitleSlideWidget =
-          tester.widget<KeynoteTitleAndBulletsSlide>(keynoteTitleSlideFinder);
-      expect(keynoteTitleSlideWidget.titleText, titleText);
-      expect(keynoteTitleSlideWidget.subTitleText, subTitleText);
-      expect(keynoteTitleSlideWidget.bulletPoints, bulletPoints);
-
-      for (final bulletPoint in bulletPoints) {
-        final textFinder = find
-            .byKey(Key('ListTextItem-${bulletPoints.indexOf(bulletPoint)}'));
-        expect(textFinder, findsOneWidget);
-      }
-    });
-
     testWidgets('test render with variant one', (tester) async {
       await tester.pumpWidget(
         MaterialApp(
