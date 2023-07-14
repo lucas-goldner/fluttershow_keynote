@@ -4,7 +4,7 @@ import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 /// A widget that recreates the image slide from Keynote.
 /// Basically just an image on top of a slide.
 class KeynoteImageSlide extends StatelessWidget {
-  /// Constructs a KeynoteImageSlide.
+  /// Constructs a [KeynoteImageSlide].
   ///
   /// [image] is the widget representing the image to display on the slide.
   ///

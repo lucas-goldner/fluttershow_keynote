@@ -7,9 +7,9 @@ import 'package:fluttershow_keynote/slides/quote/keynote_quote_slide.dart';
 
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
-/// A collection of variants for the KeynoteQuoteSlide widget.
+/// A collection of variants for the [KeynoteQuoteSlide] widget.
 class KeynoteQuoteSlideVariants {
-  /// Creates a variant of the KeynoteQuoteSlide with specific configurations.
+  /// Creates a variant of the [KeynoteQuoteSlide] with specific configurations.
   ///
   /// [quoteText] is the text of the quote.
   ///
@@ -41,7 +41,7 @@ class KeynoteQuoteSlideVariants {
         animationArguments: animationArguments,
       );
 
-  /// Creates another variant of the KeynoteQuoteSlide
+  /// Creates another variant of the [KeynoteQuoteSlide]
   /// with specific configurations.
   ///
   /// [quoteText] is the text of the quote.

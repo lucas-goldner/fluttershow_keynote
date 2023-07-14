@@ -4,9 +4,9 @@ import 'package:fluttershow_keynote/model/enum/variants.dart';
 import 'package:fluttershow_keynote/slides/big_fact/keynote_big_fact_slide.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
-/// A collection of variants for the KeynoteBigFactSlide widget.
+/// A collection of variants for the [KeynoteBigFactSlide] widget.
 class KeynoteBigFactSlideVariants {
-  /// Creates a variant of the KeynoteBigFactSlide widget
+  /// Creates a variant of the [KeynoteBigFactSlide] widget
   /// with a gradient background.
   ///
   /// [titleText] is the text for the slide title.
@@ -37,7 +37,7 @@ class KeynoteBigFactSlideVariants {
         animationArguments: animationArguments,
       );
 
-  /// Creates a variant of the KeynoteBigFactSlide widget
+  /// Creates a variant of the [KeynoteBigFactSlide] widget
   /// without a gradient background.
   ///
   /// [titleText] is the text for the slide title.

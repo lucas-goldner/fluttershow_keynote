@@ -7,7 +7,7 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 /// A widget that recreates the bullet slide from Keynote.
 /// Consists of a list of bullet points.
 class KeynoteBulletsSlide extends StatelessWidget {
-  /// Constructs a KeynoteBulletsSlide.
+  /// Constructs a [KeynoteBulletsSlide].
   ///
   /// [bulletPoints] is the list of texts to display on the slide.
   ///

@@ -8,7 +8,7 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 /// A widget that recreates the section slide from Keynote.
 /// Consists of a section text.
 class KeynoteSectionSlide extends StatelessWidget {
-  /// Constructs a KeynoteSectionSlide widget.
+  /// Constructs a [KeynoteSectionSlide] widget.
   ///
   /// [sectionText] is the text of the section title.
   ///

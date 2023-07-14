@@ -9,7 +9,7 @@ import 'package:fluttershow_base/fluttershow_base.dart';
 /// Big Image | Small Image 1
 /// Big Image | Small Image 2
 class KeynotePhoto3UpSlide extends StatelessWidget {
-  /// Constructs a KeynotePhoto3UpSlide.
+  /// Constructs a [KeynotePhoto3UpSlide].
   ///
   /// [bigImage] is the widget representing the large image to display.
   ///

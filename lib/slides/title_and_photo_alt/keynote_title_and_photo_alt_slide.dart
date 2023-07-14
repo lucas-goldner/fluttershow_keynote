@@ -8,7 +8,7 @@ import 'package:fluttershow_base/fluttershow_base.dart';
 /// A widget that recreates the title and photo alt slide from Keynote.
 /// Consists of a title and photo but in an alternative layout.
 class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
-  /// Creates a KeynoteTitleAndPhotoAltSlide.
+  /// Creates a [KeynoteTitleAndPhotoAltSlide].
   ///
   /// The [titleText] is the main title displayed on the slide.
   ///

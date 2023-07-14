@@ -7,7 +7,7 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 /// A widget that recreates the statement slide from Keynote.
 /// Consists
 class KeynoteStatementSlide extends StatelessWidget {
-  /// Constructs a KeynoteStatementSlide widget.
+  /// Constructs a [KeynoteStatementSlide] widget.
   ///
   /// [statement] is the text of the statement.
   ///

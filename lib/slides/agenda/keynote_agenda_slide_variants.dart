@@ -5,10 +5,10 @@ import 'package:fluttershow_keynote/slides/agenda/keynote_agenda_slide.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
 /// A class that provides variant configurations
-/// for the `KeynoteAgendaSlide` widget.
+/// for the [KeynoteAgendaSlide] widget.
 /// Consists of a title and a subtitle.
 class KeynoteAgendaSlideVariants {
-  /// Constructs a `KeynoteAgendaSlide` with variant one configuration.
+  /// Constructs a [KeynoteAgendaSlide] with variant one configuration.
   ///
   /// [titleText] is the text for the title.
   ///
@@ -40,7 +40,7 @@ class KeynoteAgendaSlideVariants {
         animationArguments: animationArguments,
       );
 
-  /// Constructs a `KeynoteAgendaSlide` with variant two configuration.
+  /// Constructs a [KeynoteAgendaSlide] with variant two configuration.
   ///
   /// [titleText] is the text for the title.
   ///

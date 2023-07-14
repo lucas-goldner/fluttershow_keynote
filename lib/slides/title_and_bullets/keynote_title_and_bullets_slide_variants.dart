@@ -3,9 +3,9 @@ import 'package:fluttershow_base/fluttershow_base.dart';
 import 'package:fluttershow_keynote/slides/title_and_bullets/keynote_title_and_bullets_slide.dart';
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
-/// A collection of variants for the KeynoteTitleAndBulletsSlide widget.
+/// A collection of variants for the [KeynoteTitleAndBulletsSlide] widget.
 class KeynoteTitleAndBulletsSlideVariants {
-  /// Creates a variant of the KeynoteTitleAndBulletsSlide widget
+  /// Creates a variant of the [KeynoteTitleAndBulletsSlide] widget
   /// with specific parameters.
   ///
   /// [titleText] is the text for the slide title.
@@ -39,7 +39,7 @@ class KeynoteTitleAndBulletsSlideVariants {
         animationArguments: animationArguments,
       );
 
-  /// Creates another variant of the KeynoteTitleAndBulletsSlide
+  /// Creates another variant of the [KeynoteTitleAndBulletsSlide]
   /// widget with specific parameters.
   ///
   /// [titleText] is the text for the slide title.

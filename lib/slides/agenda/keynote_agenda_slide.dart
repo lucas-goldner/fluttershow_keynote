@@ -9,7 +9,7 @@ import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 /// Consists of a title and subtitle with an optional footer
 /// widget to place content.
 class KeynoteAgendaSlide extends StatelessWidget {
-  /// Constructs a KeynoteAgendaSlide widget.
+  /// Constructs a [KeynoteAgendaSlide] widget.
   ///
   /// [titleText] is the text for the slide title.
   ///

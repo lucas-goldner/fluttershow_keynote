@@ -9,7 +9,7 @@ import 'package:fluttershow_keynote/style/keynote_gradients.dart';
 /// A widget that recreates the big fact slide from Keynote.
 /// Consists of a title and a subtitle.
 class KeynoteBigFactSlide extends StatelessWidget {
-  /// Constructs a KeynoteBigFactSlide.
+  /// Constructs a [KeynoteBigFactSlide].
   ///
   /// [titleText] is the text for the slide title.
   ///

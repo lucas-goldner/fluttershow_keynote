@@ -6,7 +6,7 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
 /// Contains predefined variants for the [KeynoteTitleAndPhotoAltSlide].
 class KeynoteTitleAndPhotoAltSlideVariants {
-  /// Creates a variant of the KeynoteTitleAndPhotoAltSlide
+  /// Creates a variant of the [KeynoteTitleAndPhotoAltSlide]
   /// with a specific configuration.
   ///
   /// The [variantOne] variant displays a title, subtitle, and an image.

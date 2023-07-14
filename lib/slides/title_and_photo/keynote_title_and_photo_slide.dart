@@ -9,7 +9,7 @@ import 'package:fluttershow_keynote/model/enum/variants.dart';
 /// A widget that recreates the title and photo slide from Keynote.
 /// Consists of a title and photo.
 class KeynoteTitleAndPhotoSlide extends StatelessWidget {
-  /// Creates a KeynoteTitleAndPhotoSlide.
+  /// Creates a [KeynoteTitleAndPhotoSlide].
   ///
   /// The [titleText] is used for the displayed title.
   ///

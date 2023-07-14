@@ -7,7 +7,7 @@ import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 /// A collection of static methods to create different variants
 /// of the [KeynoteTitleAndPhotoSlide].
 class KeynoteTitleAndPhotoSlideVariants {
-  /// Creates a variant one of the KeynoteTitleAndPhotoSlide.
+  /// Creates a variant one of the [KeynoteTitleAndPhotoSlide].
   ///
   /// The [titleText] parameter is required and
   /// specifies the text for the title of the slide.

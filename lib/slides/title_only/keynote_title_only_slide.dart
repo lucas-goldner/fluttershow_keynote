@@ -9,7 +9,7 @@ import 'package:fluttershow_base/fluttershow_base.dart';
 /// Consists of a title and subtitle even though the name
 /// of the slide would suggest otherwise.
 class KeynoteTitleOnlySlide extends StatelessWidget {
-  /// Constructs a `KeynoteTitleOnlySlide` with the given parameters.
+  /// Constructs a [KeynoteTitleOnlySlide] with the given parameters.
   ///
   /// The [titleText] parameter is required and represents
   /// the main title displayed on the slide.

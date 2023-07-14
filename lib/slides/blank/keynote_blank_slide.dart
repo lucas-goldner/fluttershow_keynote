@@ -8,7 +8,7 @@ import 'package:fluttershow_base/fluttershow_base.dart';
 /// A widget that recreates the blank slide from Keynote.
 /// Can be used as a template when making custom slides.
 class KeynoteBlankSlide extends StatelessWidget {
-  /// Constructs a KeynoteBlankSlide.
+  /// Constructs a [KeynoteBlankSlide].
   ///
   /// [headerWidget] is the widget for the slide header.
   ///
