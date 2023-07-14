@@ -7,7 +7,21 @@ import 'package:fluttershow_keynote/slides/quote/keynote_quote_slide.dart';
 
 import 'package:fluttershow_keynote/style/keynote_textstyles.dart';
 
+/// A collection of variants for the [KeynoteQuoteSlide] widget.
 class KeynoteQuoteSlideVariants {
+  /// Creates a variant of the [KeynoteQuoteSlide] with specific configurations.
+  ///
+  /// [quoteText] is the text of the quote.
+  ///
+  /// [attributionText] is the text of the attribution.
+  ///
+  /// [gradient] is the gradient to apply to the quote.
+  ///
+  /// [animationIndex] is the optional index used for
+  /// controlling the animation of the slide.
+  ///
+  /// [animationArguments] is the optional animation
+  /// arguments for animating the slide.
   static KeynoteQuoteSlide variantOne({
     required String quoteText,
     required String attributionText,
@@ -27,6 +41,18 @@ class KeynoteQuoteSlideVariants {
         animationArguments: animationArguments,
       );
 
+  /// Creates another variant of the [KeynoteQuoteSlide]
+  /// with specific configurations.
+  ///
+  /// [quoteText] is the text of the quote.
+  ///
+  /// [attributionText] is the text of the attribution.
+  ///
+  /// [animationIndex] is the optional index used for
+  /// controlling the animation of the slide.
+  ///
+  /// [animationArguments] is the optional animation
+  /// arguments for animating the slide.
   static KeynoteQuoteSlide variantTwo({
     required String quoteText,
     required String attributionText,
