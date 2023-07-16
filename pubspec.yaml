@@ -1,6 +1,6 @@
 name: fluttershow_keynote
-description: Library for keynote slides for the FlutterShow framework
-version: 0.0.1
+description: Package for FlutterShow framework that recreates all types of slides from Keynote with variations.
+version: 1.0.0
 homepage: https://github.com/lucas-goldner/FlutterShow
 
 environment:
@@ -10,8 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fluttershow_base:
-    path: "../fluttershow_base"
+  fluttershow_base: ^1.0.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0

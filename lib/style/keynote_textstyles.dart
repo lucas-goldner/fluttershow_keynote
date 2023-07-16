@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fluttershow_keynote/model/enum/variants.dart';
 
+/// A collection of predefined text styles used in Keynote slides.
 class KeynoteTextstyles {
+  // Title Styles
+
   static TextStyle _titleVariantOne({Color? color, double? fontSize}) =>
       TextStyle(
         fontSize: fontSize ?? 116,
@@ -20,6 +23,8 @@ class KeynoteTextstyles {
         wordSpacing: 0.8,
       );
 
+  /// Returns the title text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle title({
     Variants? variant,
     Color? color,
@@ -35,6 +40,9 @@ class KeynoteTextstyles {
     }
   }
 
+  /// Returns the smaller version of the title text style based
+  /// on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle titleSmall({
     Variants? variant,
     Color? color,
@@ -49,6 +57,8 @@ class KeynoteTextstyles {
         return _titleVariantOne(color: color, fontSize: fontSize ?? 84);
     }
   }
+
+  // Subtitle Styles
 
   static TextStyle _subtitleVariantOne({Color? color, double? fontSize}) =>
       TextStyle(
@@ -66,6 +76,8 @@ class KeynoteTextstyles {
         color: color,
       );
 
+  /// Returns the subtitle text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle subtitle({
     Variants? variant,
     Color? color,
@@ -81,6 +93,9 @@ class KeynoteTextstyles {
     }
   }
 
+  /// Returns the smaller version of the subtitle text style based
+  /// on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle subtitleSmall({
     Variants? variant,
     Color? color,
@@ -95,6 +110,8 @@ class KeynoteTextstyles {
         return _subtitleVariantOne(color: color, fontSize: fontSize ?? 54);
     }
   }
+
+  // Footer Styles
 
   static TextStyle _footerVariantOne({Color? color, double? fontSize}) =>
       TextStyle(
@@ -112,6 +129,8 @@ class KeynoteTextstyles {
         color: color,
       );
 
+  /// Returns the footer text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle footer({
     Variants? variant,
     Color? color,
@@ -126,6 +145,8 @@ class KeynoteTextstyles {
         return _footerVariantOne(color: color, fontSize: fontSize);
     }
   }
+
+  // Heading Styles
 
   static TextStyle _headingVariantOne({Color? color, double? fontSize}) =>
       TextStyle(
@@ -143,6 +164,8 @@ class KeynoteTextstyles {
         color: color,
       );
 
+  /// Returns the heading text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle heading({
     Variants? variant,
     Color? color,
@@ -157,6 +180,8 @@ class KeynoteTextstyles {
         return _headingVariantOne(color: color, fontSize: fontSize);
     }
   }
+
+  // Body Styles
 
   static TextStyle _bodyVariantOne({Color? color, double? fontSize}) =>
       TextStyle(
@@ -174,6 +199,8 @@ class KeynoteTextstyles {
         color: color,
       );
 
+  /// Returns the body text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle body({
     Variants? variant,
     Color? color,
@@ -188,6 +215,8 @@ class KeynoteTextstyles {
         return _bodyVariantOne(color: color, fontSize: fontSize);
     }
   }
+
+  // Section Styles
 
   static TextStyle _sectionVariantOne({
     Color? color,
@@ -208,6 +237,8 @@ class KeynoteTextstyles {
         color: color,
       );
 
+  /// Returns the section title text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle section({
     Variants? variant,
     Color? color,
@@ -223,6 +254,9 @@ class KeynoteTextstyles {
     }
   }
 
+  // Statement Styles
+
+  /// Returns the statement text style.
   static TextStyle statement({
     Variants? variant,
     Color? color,
@@ -234,6 +268,8 @@ class KeynoteTextstyles {
         fontFamily: 'Helvetica Neue',
         color: color,
       );
+
+  // Fact Styles
 
   static TextStyle _factVariantOne({
     Color? color,
@@ -254,6 +290,8 @@ class KeynoteTextstyles {
         color: color,
       );
 
+  /// Returns the fact text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle fact({
     Variants? variant,
     Color? color,
@@ -268,6 +306,8 @@ class KeynoteTextstyles {
         return _factVariantOne(color: color, fontSize: fontSize);
     }
   }
+
+  // Quote Styles
 
   static TextStyle _quoteVariantOne({
     Color? color,
@@ -288,6 +328,8 @@ class KeynoteTextstyles {
         color: color,
       );
 
+  /// Returns the quote text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle quote({
     Variants? variant,
     Color? color,
@@ -302,6 +344,8 @@ class KeynoteTextstyles {
         return _quoteVariantOne(color: color, fontSize: fontSize);
     }
   }
+
+  // Attribution Styles
 
   static TextStyle _attributionVariantOne({
     Color? color,
@@ -322,6 +366,8 @@ class KeynoteTextstyles {
         color: color,
       );
 
+  /// Returns the attribution text style based on the provided variant.
+  /// The default variant is [Variants.one].
   static TextStyle attribution({
     Variants? variant,
     Color? color,
