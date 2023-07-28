@@ -15,7 +15,7 @@ class KeynoteTitleSlideVariants {
   ///
   /// The [footerText] represents the footer text of the slide.
   ///
-  /// The [gradient] is an optional parameter that defines
+  /// The [gradient] is an parameter that defines
   /// the gradient background for the title.
   ///
   /// The [animationIndex] represents the index of

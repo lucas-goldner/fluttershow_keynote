@@ -11,7 +11,7 @@ class KeynoteTitleOnlySlideVariants {
   ///
   /// The [titleText] is the main title displayed on the slide.
   ///
-  /// The [subTitleText] is an optional subtitle displayed below the title.
+  /// The [subTitleText] is an subtitle displayed below the title.
   ///
   /// The [animationIndex] is the index of the slide for animations.
   ///
@@ -40,7 +40,7 @@ class KeynoteTitleOnlySlideVariants {
   ///
   /// The [titleText] is the main title displayed on the slide.
   ///
-  /// The [subTitleText] is an optional subtitle displayed below the title.
+  /// The [subTitleText] is an subtitle displayed below the title.
   ///
   /// The [animationIndex] is the index of the slide for animations.
   ///

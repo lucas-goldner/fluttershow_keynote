@@ -17,10 +17,10 @@ class KeynoteQuoteSlideVariants {
   ///
   /// [gradient] is the gradient to apply to the quote.
   ///
-  /// [animationIndex] is the optional index used for
+  /// [animationIndex] is the index used for
   /// controlling the animation of the slide.
   ///
-  /// [animationArguments] is the optional animation
+  /// [animationArguments] is the animation
   /// arguments for animating the slide.
   static KeynoteQuoteSlide variantOne({
     required String quoteText,
@@ -48,10 +48,10 @@ class KeynoteQuoteSlideVariants {
   ///
   /// [attributionText] is the text of the attribution.
   ///
-  /// [animationIndex] is the optional index used for
+  /// [animationIndex] is the index used for
   /// controlling the animation of the slide.
   ///
-  /// [animationArguments] is the optional animation
+  /// [animationArguments] is the animation
   /// arguments for animating the slide.
   static KeynoteQuoteSlide variantTwo({
     required String quoteText,

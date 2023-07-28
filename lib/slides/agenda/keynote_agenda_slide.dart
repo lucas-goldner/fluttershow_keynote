@@ -6,7 +6,7 @@ import 'package:fluttershow_base/components/widgets/spacing/margins.dart';
 import 'package:fluttershow_base/components/widgets/spacing/paddings.dart';
 
 /// A widget that recreates the agenda slide from Keynote.
-/// Consists of a title and subtitle with an optional footer
+/// Consists of a title and subtitle with an footer
 /// widget to place content.
 class KeynoteAgendaSlide extends StatelessWidget {
   /// Constructs a [KeynoteAgendaSlide] widget.
@@ -19,11 +19,15 @@ class KeynoteAgendaSlide extends StatelessWidget {
   ///
   /// [subtitleStyle] is the text style for the slide subtitle.
   ///
-  /// [titleAlignment] is the alignment for the slide title.
+  /// [titleAlignment] is the alignment for the slide title widget.
   ///
-  /// [subtitleAlignment] is the alignment for the slide subtitle.
+  /// [subtitleAlignment] is the alignment for the slide subtitle widget.
   ///
-  /// [footerAlignment] is the alignment for the slide footer.
+  /// [footerAlignment] is the alignment for the slide footer widget.
+  ///
+  /// [titleTextAlignment] is the text alignment for the slide title.
+  ///
+  /// [subtitleTextAlignment] is the text alignment for the slide subtitle.
   ///
   /// [titleSubTitleSpacing] is the widget to specify spacing
   /// between the title and subtitle.
@@ -58,6 +62,8 @@ class KeynoteAgendaSlide extends StatelessWidget {
     this.subTitleText,
     this.titleStyle,
     this.subtitleStyle,
+    this.titleTextAlignment,
+    this.subtitleTextAlignment,
     this.titleAlignment,
     this.subtitleAlignment,
     this.footerAlignment,
@@ -86,13 +92,19 @@ class KeynoteAgendaSlide extends StatelessWidget {
   /// The text style for the slide subtitle.
   final TextStyle? subtitleStyle;
 
-  /// The alignment for the slide title.
+  /// The text alignment for the slide title widget.
+  final TextAlign? titleTextAlignment;
+
+  /// The text alignment for the slide subtitle widget.
+  final TextAlign? subtitleTextAlignment;
+
+  /// The alignment for the slide title widget.
   final Alignment? titleAlignment;
 
-  /// The alignment for the slide subtitle.
+  /// The alignment for the slide subtitle widget.
   final Alignment? subtitleAlignment;
 
-  /// The alignment for the slide footer.
+  /// The alignment for the slide footer widget.
   final Alignment? footerAlignment;
 
   /// The widget to specify spacing between the title and subtitle.
@@ -142,6 +154,7 @@ class KeynoteAgendaSlide extends StatelessWidget {
                       child: Text(
                         titleText,
                         style: titleStyle,
+                        textAlign: titleTextAlignment,
                       ),
                     ),
                 indexToShowAt: 0,
@@ -159,6 +172,7 @@ class KeynoteAgendaSlide extends StatelessWidget {
                       child: Text(
                         subTitleText ?? '',
                         style: subtitleStyle,
+                        textAlign: subtitleTextAlignment,
                       ),
                     ),
                 indexToShowAt: 1,

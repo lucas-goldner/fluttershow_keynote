@@ -15,10 +15,10 @@ class KeynoteBigFactSlideVariants {
   ///
   /// [gradient] is the gradient used for the slide title background.
   ///
-  /// [animationIndex] is the optional index at
+  /// [animationIndex] is the index at
   /// which the animation should start.
   ///
-  /// [animationArguments] is the optional animation arguments
+  /// [animationArguments] is the animation arguments
   /// for the slide animation.
   static KeynoteBigFactSlide variantOne({
     required String titleText,
@@ -44,10 +44,10 @@ class KeynoteBigFactSlideVariants {
   ///
   /// [subTitleText] is the text for the slide subtitle.
   ///
-  /// [animationIndex] is the optional index at which
+  /// [animationIndex] is the index at which
   /// the animation should start.
   ///
-  /// [animationArguments] is the optional animation arguments
+  /// [animationArguments] is the animation arguments
   /// for the slide animation.
   static KeynoteBigFactSlide variantTwo({
     required String titleText,

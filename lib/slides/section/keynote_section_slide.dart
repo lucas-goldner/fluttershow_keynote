@@ -12,15 +12,15 @@ class KeynoteSectionSlide extends StatelessWidget {
   ///
   /// [sectionText] is the text of the section title.
   ///
-  /// [sectionTextStyle] is the optional style for the section title text.
+  /// [sectionTextStyle] is the style for the section title text.
   ///
-  /// [sectionAlignment] is the optional alignment for the section title text.
+  /// [sectionAlignment] is the alignment for the section title text.
   ///
-  /// [sectionGradient] is the optional gradient to apply to the section title.
+  /// [sectionGradient] is the gradient to apply to the section title.
   ///
-  /// [padding] is the optional padding around the slide.
+  /// [padding] is the padding around the slide.
   ///
-  /// [sectionTitleReplacementWidget] is the optional replacement
+  /// [sectionTitleReplacementWidget] is the replacement
   /// widget for the section title.
   const KeynoteSectionSlide({
     required this.sectionText,
@@ -35,19 +35,19 @@ class KeynoteSectionSlide extends StatelessWidget {
   /// The text of the section title.
   final String sectionText;
 
-  /// The optional gradient to apply to the section title.
+  /// The gradient to apply to the section title.
   final Gradient? sectionGradient;
 
-  /// The optional style for the section title text.
+  /// The style for the section title text.
   final TextStyle? sectionTextStyle;
 
-  /// The optional alignment for the section title text.
+  /// The alignment for the section title text.
   final Alignment? sectionAlignment;
 
-  /// The optional padding around the slide.
+  /// The padding around the slide.
   final EdgeInsets? padding;
 
-  /// The optional replacement widget for the section title.
+  /// The replacement widget for the section title.
   final Widget? sectionTitleReplacementWidget;
 
   @override

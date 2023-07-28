@@ -28,6 +28,15 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
   ///
   /// The [headingStyle] defines the style of the heading text.
   ///
+  /// The [titleTextAlignment] specifies the text alignment
+  /// of the title within the slide.
+  ///
+  /// The [subtitleTextAlignment] specifies the text alignment
+  /// of the subtitle within the slide.
+  ///
+  /// The [headingTextAlignment] specifies the text alignment
+  /// of the heading within the slide.
+  ///
   /// The [titleAlignment] specifies the alignment
   /// of the title within the slide.
   ///
@@ -80,6 +89,9 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
     this.titleAlignment,
     this.subtitleAlignment,
     this.headingAlignment,
+    this.titleTextAlignment,
+    this.subtitleTextAlignment,
+    this.headingTextAlignment,
     this.titleSubTitleSpacing,
     this.headingBottomSpacing,
     this.padding,
@@ -128,6 +140,15 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
 
   /// The alignment of the heading.
   final Alignment? headingAlignment;
+
+  /// The text alignment of the title.
+  final TextAlign? titleTextAlignment;
+
+  /// The text alignment of the subtitle.
+  final TextAlign? subtitleTextAlignment;
+
+  /// The text alignment of the heading.
+  final TextAlign? headingTextAlignment;
 
   /// The spacing widget between the title and subtitle.
   final Widget? titleSubTitleSpacing;
@@ -193,6 +214,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                               : Text(
                                   titleText,
                                   style: titleStyle,
+                                  textAlign: titleTextAlignment,
                                 ),
                         ),
                     indexToShowAt: 0,
@@ -210,6 +232,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                           child: Text(
                             subTitleText ?? '',
                             style: subtitleStyle,
+                            textAlign: subtitleTextAlignment,
                           ),
                         ),
                     indexToShowAt: 1,
@@ -226,6 +249,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                           child: Text(
                             headingText ?? '',
                             style: headingStyle,
+                            textAlign: headingTextAlignment,
                           ),
                         ),
                     indexToShowAt: 2,
@@ -258,6 +282,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                           child: Text(
                             headingText ?? '',
                             style: headingStyle,
+                            textAlign: headingTextAlignment,
                           ),
                         ),
                     indexToShowAt: 0,
@@ -283,6 +308,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                               : Text(
                                   titleText,
                                   style: titleStyle,
+                                  textAlign: titleTextAlignment,
                                 ),
                         ),
                     indexToShowAt: 1,
@@ -300,6 +326,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                           child: Text(
                             subTitleText ?? '',
                             style: subtitleStyle,
+                            textAlign: subtitleTextAlignment,
                           ),
                         ),
                     indexToShowAt: 2,
@@ -315,14 +342,9 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
       );
 
   @override
-  Widget build(BuildContext context) {
-    switch (variant) {
-      case Variants.one:
-        return _variantOne();
-      case Variants.two:
-        return _variantTwo();
-      case _:
-        return _variantOne();
-    }
-  }
+  Widget build(BuildContext context) => switch (variant) {
+        Variants.one => _variantOne(),
+        Variants.two => _variantTwo(),
+        _ => _variantOne(),
+      };
 }

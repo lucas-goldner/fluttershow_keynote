@@ -17,7 +17,7 @@ class KeynoteTitleSlide extends StatelessWidget {
   ///
   /// The [footerText] represents the footer text of the slide.
   ///
-  /// The [titleGradient] is an optional gradient that
+  /// The [titleGradient] is an gradient that
   /// can be applied to the title text.
   ///
   /// The [titleStyle] defines the style for the title text.
@@ -34,6 +34,15 @@ class KeynoteTitleSlide extends StatelessWidget {
   ///
   /// The [footerAlignment] represents the alignment of
   /// the footer text within the slide.
+  ///
+  /// The [titleTextAlignment] represents the text alignment of
+  /// the title text.
+  ///
+  /// The [subtitleTextAlignment] represents the text alignment of
+  /// the subtitle text.
+  ///
+  /// The [footerTextAlignment] represents the text alignment of
+  /// the footer text.
   ///
   /// The [titleSubTitleSpacing] is a widget that provides
   /// spacing between the title and subtitle.
@@ -78,6 +87,9 @@ class KeynoteTitleSlide extends StatelessWidget {
     this.titleAlignment,
     this.subtitleAlignment,
     this.footerAlignment,
+    this.titleTextAlignment,
+    this.subtitleTextAlignment,
+    this.footerTextAlignment,
     this.titleSubTitleSpacing,
     this.footerBottomSpacing,
     this.padding,
@@ -120,6 +132,15 @@ class KeynoteTitleSlide extends StatelessWidget {
 
   /// The alignment of the footer text within the slide.
   final Alignment? footerAlignment;
+
+  /// The text alignment of the title text.
+  final TextAlign? titleTextAlignment;
+
+  /// The text alignment of the subtitle text.
+  final TextAlign? subtitleTextAlignment;
+
+  /// The text alignment of the footer text.
+  final TextAlign? footerTextAlignment;
 
   /// The spacing widget between the title and subtitle.
   final Widget? titleSubTitleSpacing;
@@ -175,6 +196,7 @@ class KeynoteTitleSlide extends StatelessWidget {
                           : Text(
                               titleText,
                               style: titleStyle,
+                              textAlign: titleTextAlignment,
                             ),
                     ),
                 indexToShowAt: 0,
@@ -192,6 +214,7 @@ class KeynoteTitleSlide extends StatelessWidget {
                       child: Text(
                         subTitleText ?? '',
                         style: subtitleStyle,
+                        textAlign: subtitleTextAlignment,
                       ),
                     ),
                 indexToShowAt: 1,
@@ -208,6 +231,7 @@ class KeynoteTitleSlide extends StatelessWidget {
                       child: Text(
                         footerText ?? '',
                         style: footerStyle,
+                        textAlign: footerTextAlignment,
                       ),
                     ),
                 indexToShowAt: 2,

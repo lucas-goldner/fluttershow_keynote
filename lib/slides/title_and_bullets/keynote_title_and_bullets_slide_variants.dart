@@ -12,11 +12,11 @@ class KeynoteTitleAndBulletsSlideVariants {
   ///
   /// [subTitleText] is the text for the slide subtitle.
   ///
-  /// [bulletPoints] is the optional list of bullet points for the slide.
+  /// [bulletPoints] is the list of bullet points for the slide.
   ///
-  /// [animationIndex] is the optional index for animation.
+  /// [animationIndex] is the index for animation.
   ///
-  /// [animationArguments] is the optional arguments for animation.
+  /// [animationArguments] is the arguments for animation.
   static KeynoteTitleAndBulletsSlide variantOne({
     required String titleText,
     required String subTitleText,
@@ -46,11 +46,11 @@ class KeynoteTitleAndBulletsSlideVariants {
   ///
   /// [subTitleText] is the text for the slide subtitle.
   ///
-  /// [bulletPoints] is the optional list of bullet points for the slide.
+  /// [bulletPoints] is the list of bullet points for the slide.
   ///
-  /// [animationIndex] is the optional index for animation.
+  /// [animationIndex] is the index for animation.
   ///
-  /// [animationArguments] is the optional arguments for animation.
+  /// [animationArguments] is the arguments for animation.
   static KeynoteTitleAndBulletsSlide variantTwo({
     required String titleText,
     required String subTitleText,

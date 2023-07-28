@@ -22,6 +22,11 @@ class KeynoteBigFactSlide extends StatelessWidget {
   ///
   /// [subtitleStyle] is the style for the slide subtitle.
   ///
+  /// [titleTextAlignment] is the text alignment for the slide title.
+  /// Only affects the text if no [titleGradient] is passed.
+  ///
+  /// [subtitleTextAlignment] is the text alignment for the slide subtitle.
+  ///
   /// [titleAlignment] is the alignment for the slide title.
   ///
   /// [subtitleAlignment] is the alignment for the slide subtitle.
@@ -55,6 +60,8 @@ class KeynoteBigFactSlide extends StatelessWidget {
     this.subtitleStyle,
     this.titleAlignment,
     this.subtitleAlignment,
+    this.titleTextAlignment,
+    this.subtitleTextAlignment,
     this.titleSubTitleSpacing,
     this.padding,
     this.headerFlexUnits,
@@ -80,11 +87,18 @@ class KeynoteBigFactSlide extends StatelessWidget {
   /// The style for the slide subtitle.
   final TextStyle? subtitleStyle;
 
-  /// The alignment for the slide title.
+  /// The alignment for the slide title widget.
   final Alignment? titleAlignment;
 
-  /// The alignment for the slide subtitle.
+  /// The alignment for the slide subtitle widget.
   final Alignment? subtitleAlignment;
+
+  /// The alignment for the slide title text.
+  /// Only affects the text if no [titleGradient] is passed.
+  final TextAlign? titleTextAlignment;
+
+  /// The alignment for the slide subtitle text.
+  final TextAlign? subtitleTextAlignment;
 
   /// The widget to provide spacing between the title and subtitle.
   final Widget? titleSubTitleSpacing;
@@ -131,6 +145,7 @@ class KeynoteBigFactSlide extends StatelessWidget {
                           : Text(
                               titleText,
                               style: titleStyle,
+                              textAlign: titleTextAlignment,
                             ),
                     ),
                 indexToShowAt: 0,
@@ -148,6 +163,7 @@ class KeynoteBigFactSlide extends StatelessWidget {
                       child: Text(
                         subTitleText ?? '',
                         style: subtitleStyle,
+                        textAlign: subtitleTextAlignment,
                       ),
                     ),
                 indexToShowAt: 1,
