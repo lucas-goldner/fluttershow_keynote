@@ -140,6 +140,7 @@ class KeynoteQuoteSlide extends StatelessWidget {
                               gradient: quoteGradient ??
                                   KeynoteGradients.titleSlideGradient,
                               style: quoteStyle,
+                              textAlign: quoteTextAlignment,
                             )
                           : Text(
                               quoteText,

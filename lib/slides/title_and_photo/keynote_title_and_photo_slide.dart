@@ -304,6 +304,7 @@ class KeynoteTitleAndPhotoSlide extends StatelessWidget {
                                         colors: Colors.primaries,
                                       ),
                                   style: titleStyle,
+                                  textAlign: titleTextAlignment,
                                 )
                               : Text(
                                   titleText,

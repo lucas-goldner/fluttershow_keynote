@@ -159,10 +159,10 @@ packages:
     dependency: transitive
     description:
       name: fluttershow_base
-      sha256: "2015d7e4f5d8f0b6fe1bc1b954b8b59cc3bc208d7ad9d75ee139ba8e7c143bec"
+      sha256: "0b1f54e21e01c463ac83f4cabc79fdb7e47d0dd50a2ee5c915e3e0ea6de9160b"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   fluttershow_keynote:
     dependency: "direct main"
     description:

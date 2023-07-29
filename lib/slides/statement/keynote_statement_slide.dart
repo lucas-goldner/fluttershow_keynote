@@ -13,7 +13,9 @@ class KeynoteStatementSlide extends StatelessWidget {
   ///
   /// [statementTextStyle] is the style for the statement text.
   ///
-  /// [statementAlignment] is the alignment for the statement text.
+  /// [statementAlignment] is the alignment for the statement text widget.
+  ///
+  /// [statementTextAlignment] is the text alignment for the statement text.
   ///
   /// [statementGradient] is the gradient to apply to the statement.
   ///
@@ -25,6 +27,7 @@ class KeynoteStatementSlide extends StatelessWidget {
     required this.statement,
     this.statementTextStyle,
     this.statementAlignment,
+    this.statementTextAlignment,
     this.statementGradient,
     this.padding,
     this.statementTitleReplacementWidget,
@@ -37,11 +40,14 @@ class KeynoteStatementSlide extends StatelessWidget {
   /// The gradient to apply to the statement.
   final Gradient? statementGradient;
 
-  /// The style for the statement text.
+  /// The style for the statement text widget.
   final TextStyle? statementTextStyle;
 
   /// The alignment for the statement text.
   final Alignment? statementAlignment;
+
+  /// The text alignment for the statement text.
+  final TextAlign? statementTextAlignment;
 
   /// The padding around the slide.
   final EdgeInsets? padding;
@@ -66,11 +72,13 @@ class KeynoteStatementSlide extends StatelessWidget {
                                 KeynoteGradients.titleGradient,
                             style: statementTextStyle ??
                                 KeynoteTextstyles.statement(),
+                            textAlign: statementTextAlignment,
                           )
                         : Text(
                             statement,
                             style: statementTextStyle ??
                                 KeynoteTextstyles.statement(),
+                            textAlign: statementTextAlignment,
                           ),
                   ),
             ),

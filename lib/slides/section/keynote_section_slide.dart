@@ -14,7 +14,9 @@ class KeynoteSectionSlide extends StatelessWidget {
   ///
   /// [sectionTextStyle] is the style for the section title text.
   ///
-  /// [sectionAlignment] is the alignment for the section title text.
+  /// [sectionAlignment] is the alignment for the section title text widget.
+  ///
+  /// [sectionTextAlignment] is the text alignment for the section title text.
   ///
   /// [sectionGradient] is the gradient to apply to the section title.
   ///
@@ -26,6 +28,7 @@ class KeynoteSectionSlide extends StatelessWidget {
     required this.sectionText,
     this.sectionTextStyle,
     this.sectionAlignment,
+    this.sectionTextAlignment,
     this.sectionGradient,
     this.padding,
     this.sectionTitleReplacementWidget,
@@ -41,8 +44,11 @@ class KeynoteSectionSlide extends StatelessWidget {
   /// The style for the section title text.
   final TextStyle? sectionTextStyle;
 
-  /// The alignment for the section title text.
+  /// The alignment for the section title text widget.
   final Alignment? sectionAlignment;
+
+  /// The text alignment for the section title text.
+  final TextAlign? sectionTextAlignment;
 
   /// The padding around the slide.
   final EdgeInsets? padding;
@@ -67,11 +73,13 @@ class KeynoteSectionSlide extends StatelessWidget {
                                 KeynoteGradients.sectionTitleGradient,
                             style:
                                 sectionTextStyle ?? KeynoteTextstyles.section(),
+                            textAlign: sectionTextAlignment,
                           )
                         : Text(
                             sectionText,
                             style:
                                 sectionTextStyle ?? KeynoteTextstyles.section(),
+                            textAlign: sectionTextAlignment,
                           ),
                   ),
             ),

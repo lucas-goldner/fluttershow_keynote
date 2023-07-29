@@ -141,6 +141,7 @@ class KeynoteBigFactSlide extends StatelessWidget {
                               gradient: titleGradient ??
                                   KeynoteGradients.titleSlideGradient,
                               style: titleStyle,
+                              textAlign: titleTextAlignment,
                             )
                           : Text(
                               titleText,
