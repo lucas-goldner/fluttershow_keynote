@@ -14,12 +14,12 @@ class KeynoteAgendaSlideVariants {
   ///
   /// [subTitleText] is the text for the subtitle.
   ///
-  /// [footerWidget] is an optional widget for the slide footer.
+  /// [footerWidget] is an widget for the slide footer.
   ///
-  /// [animationIndex] is the optional index at
+  /// [animationIndex] is the index at
   /// which the animation should start.
   ///
-  /// [animationArguments] is the optional animation
+  /// [animationArguments] is the animation
   /// arguments for the slide animation.
   static KeynoteAgendaSlide variantOne({
     required String titleText,
@@ -46,12 +46,12 @@ class KeynoteAgendaSlideVariants {
   ///
   /// [subTitleText] is the text for the subtitle.
   ///
-  /// [footerWidget] is an optional widget for the slide footer.
+  /// [footerWidget] is an   widget for the slide footer.
   ///
-  /// [animationIndex] is the optional index at
+  /// [animationIndex] is the   index at
   /// which the animation should start.
   ///
-  /// [animationArguments] is the optional animatio
+  /// [animationArguments] is the   animatio
   /// arguments for the slide animation.
   static KeynoteAgendaSlide variantTwo({
     required String titleText,

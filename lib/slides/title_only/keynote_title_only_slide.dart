@@ -14,7 +14,7 @@ class KeynoteTitleOnlySlide extends StatelessWidget {
   /// The [titleText] parameter is required and represents
   /// the main title displayed on the slide.
   ///
-  /// The [subTitleText] parameter is optional and represents
+  /// The [subTitleText] parameter is and represents
   /// the subtitle displayed below the title.
   ///
   /// The [titleStyle] and [subtitleStyle] parameters allow customizing
@@ -22,6 +22,9 @@ class KeynoteTitleOnlySlide extends StatelessWidget {
   ///
   /// The [titleAlignment] and [subtitleAlignment] parameters control
   /// the alignment of the text within their containers.
+  ///
+  /// The [titleTextAlignment] and [subtitleTextAlignment] parameters control
+  /// the text alignment of the texts.
   ///
   /// The [titleSubTitleSpacing] widget adds spacing between the
   /// title and subtitle.
@@ -43,6 +46,8 @@ class KeynoteTitleOnlySlide extends StatelessWidget {
     this.subtitleStyle,
     this.titleAlignment,
     this.subtitleAlignment,
+    this.titleTextAlignment,
+    this.subtitleTextAlignment,
     this.titleSubTitleSpacing,
     this.padding,
     this.headerFlexUnits,
@@ -57,7 +62,7 @@ class KeynoteTitleOnlySlide extends StatelessWidget {
   /// The main title text displayed on the slide.
   final String titleText;
 
-  /// An optional subtitle text displayed below the title.
+  /// An subtitle text displayed below the title.
   final String? subTitleText;
 
   /// The style applied to the title text.
@@ -71,6 +76,12 @@ class KeynoteTitleOnlySlide extends StatelessWidget {
 
   /// The alignment of the subtitle text within its container.
   final Alignment? subtitleAlignment;
+
+  /// The alignment of the title text within its container.
+  final TextAlign? titleTextAlignment;
+
+  /// The alignment of the subtitle text within its container.
+  final TextAlign? subtitleTextAlignment;
 
   /// The spacing widget placed between the title and subtitle.
   final Widget? titleSubTitleSpacing;
@@ -110,6 +121,7 @@ class KeynoteTitleOnlySlide extends StatelessWidget {
                       child: Text(
                         titleText,
                         style: titleStyle,
+                        textAlign: titleTextAlignment,
                       ),
                     ),
                 indexToShowAt: 0,
@@ -127,6 +139,7 @@ class KeynoteTitleOnlySlide extends StatelessWidget {
                       child: Text(
                         subTitleText ?? '',
                         style: subtitleStyle,
+                        textAlign: subtitleTextAlignment,
                       ),
                     ),
                 indexToShowAt: 1,

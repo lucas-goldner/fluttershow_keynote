@@ -12,7 +12,7 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
   ///
   /// The [titleText] is the main title displayed on the slide.
   ///
-  /// The [subTitleText] is an optional subtitle displayed below the title.
+  /// The [subTitleText] is an subtitle displayed below the title.
   ///
   /// The [image] is the main image displayed on the slide.
   ///
@@ -21,9 +21,15 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
   /// The [subtitleStyle] defines the style of the subtitle text.
   ///
   /// The [titleAlignment] specifies the alignment of
-  /// the title within the slide.
+  /// the title widget within the slide.
   ///
   /// The [subtitleAlignment] specifies the alignment
+  /// of the subtitle widget within the slide.
+  ///
+  /// The [titleTextAlignment] specifies the text alignment of
+  /// the title within the slide.
+  ///
+  /// The [subtitleTextAlignment] specifies the text alignment
   /// of the subtitle within the slide.
   ///
   /// The [padding] specifies the padding around the slide.
@@ -53,6 +59,8 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
     this.subtitleStyle,
     this.titleAlignment,
     this.subtitleAlignment,
+    this.titleTextAlignment,
+    this.subtitleTextAlignment,
     this.padding,
     this.titleSubTitleSpacing,
     this.titleWidgetReplacement,
@@ -69,7 +77,7 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
   /// The main title text displayed on the slide.
   final String titleText;
 
-  /// The optional subtitle text displayed below the title.
+  /// The subtitle text displayed below the title.
   final String subTitleText;
 
   /// The style for the title text.
@@ -83,6 +91,12 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
 
   /// The alignment of the subtitle within the slide.
   final Alignment? subtitleAlignment;
+
+  /// The text alignment of the title within the slide.
+  final TextAlign? titleTextAlignment;
+
+  /// The text alignment of the subtitle within the slide.
+  final TextAlign? subtitleTextAlignment;
 
   /// The padding around the slide.
   final EdgeInsets? padding;
@@ -121,6 +135,7 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
                             child: Text(
                               titleText,
                               style: titleStyle,
+                              textAlign: titleTextAlignment,
                             ),
                           ),
                       indexToShowAt: 0,
@@ -138,6 +153,7 @@ class KeynoteTitleAndPhotoAltSlide extends StatelessWidget {
                             child: Text(
                               subTitleText,
                               style: subtitleStyle,
+                              textAlign: subtitleTextAlignment,
                             ),
                           ),
                       indexToShowAt: 1,

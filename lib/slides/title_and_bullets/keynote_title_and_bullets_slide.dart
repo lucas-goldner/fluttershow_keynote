@@ -14,7 +14,7 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
   /// The [subTitleText] parameter can be provided to
   /// add a subtitle to the slide.
   ///
-  /// The [bulletPoints] parameter is an optional list of strings
+  /// The [bulletPoints] parameter is an list of strings
   /// representing the bullet points for the slide.
   ///
   /// The [bullets] parameter allows you to specify the type of bullets
@@ -28,6 +28,9 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
   ///
   /// The [titleAlignment] and [subtitleAlignment] parameters specify the
   /// alignment of the title and subtitle within their respective sections.
+  ///
+  /// The [titleTextAlignment] and [subtitleTextAlignment] parameters specify
+  /// the text alignment of the title and subtitle.
   ///
   /// The [bulletPointsAlignment] parameter specifies the alignment
   /// of the bullet points within the slide.
@@ -71,6 +74,8 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
     this.bulletTextAlignment,
     this.titleAlignment,
     this.subtitleAlignment,
+    this.titleTextAlignment,
+    this.subtitleTextAlignment,
     this.titleSubTitleSpacing,
     this.subtitleBulletTextSpacing,
     this.bulletPointsPadding,
@@ -107,17 +112,23 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
   /// The style for the subtitle text.
   final TextStyle? subtitleStyle;
 
-  /// The alignment of the bullet points.
+  /// The alignment of the bullet points widget.
   final Alignment? bulletPointsAlignment;
 
-  /// The alignment of the bullet text.
-  final TextAlign? bulletTextAlignment;
-
-  /// The alignment of the title.
+  /// The alignment of the title widget.
   final Alignment? titleAlignment;
 
-  /// The alignment of the subtitle.
+  /// The alignment of the subtitle widget.
   final Alignment? subtitleAlignment;
+
+  /// The text alignment of the title.
+  final TextAlign? titleTextAlignment;
+
+  /// The text alignment of the subtitle.
+  final TextAlign? subtitleTextAlignment;
+
+  /// The text alignment of the bullet text.
+  final TextAlign? bulletTextAlignment;
 
   /// The widget to use for spacing between the title and subtitle.
   final Widget? titleSubTitleSpacing;
@@ -178,6 +189,7 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
                       child: Text(
                         titleText,
                         style: titleStyle,
+                        textAlign: titleTextAlignment,
                       ),
                     ),
                 indexToShowAt: 0,
@@ -195,6 +207,7 @@ class KeynoteTitleAndBulletsSlide extends StatelessWidget {
                       child: Text(
                         subTitleText ?? '',
                         style: subtitleStyle,
+                        textAlign: subtitleTextAlignment,
                       ),
                     ),
                 indexToShowAt: 1,

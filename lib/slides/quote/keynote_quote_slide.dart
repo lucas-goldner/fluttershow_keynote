@@ -16,22 +16,27 @@ class KeynoteQuoteSlide extends StatelessWidget {
   ///
   /// [attributionText] is the optional text of the attribution.
   ///
-  /// [quoteGradient] is the optional gradient to apply to the quote.
+  /// [quoteGradient] is the gradient to apply to the quote.
   ///
-  /// [quoteStyle] is the optional style for the quote text.
+  /// [quoteStyle] is the style for the quote text.
   ///
-  /// [attributionStyle] is the optional style for the attribution text.
+  /// [attributionStyle] is the style for the attribution text.
   ///
-  /// [quoteAlignment] is the optional alignment for the quote text.
+  /// [quoteTextAlignment] is the text alignment for the quote text widget.
   ///
-  /// [attributionAlignment] is the optional alignment for the attribution text.
+  /// [attributionTextAlignment] is the text alignment
+  /// for the attribution text widget.
   ///
-  /// [quoteAttributionSpacing] is the optional spacing widget
+  /// [quoteAlignment] is the alignment for the quote text widget.
+  ///
+  /// [attributionAlignment] is the alignment for the attribution text widget.
+  ///
+  /// [quoteAttributionSpacing] is the spacing widget
   /// between the quote and attribution.
   ///
   /// [padding] is the optional padding around the slide.
   ///
-  /// [headerFlexUnits] is the optional flex units for the header section.
+  /// [headerFlexUnits] is the flex units for the header section.
   ///
   /// [bodyFlexUnits] is the optional flex units for the body section.
   ///
@@ -55,6 +60,8 @@ class KeynoteQuoteSlide extends StatelessWidget {
     this.attributionStyle,
     this.quoteAlignment,
     this.attributionAlignment,
+    this.quoteTextAlignment,
+    this.attributionTextAlignment,
     this.quoteAttributionSpacing,
     this.padding,
     this.headerFlexUnits,
@@ -81,9 +88,15 @@ class KeynoteQuoteSlide extends StatelessWidget {
   final TextStyle? attributionStyle;
 
   /// The optional alignment for the quote text.
-  final Alignment? quoteAlignment;
+  final TextAlign? quoteTextAlignment;
 
   /// The optional alignment for the attribution text.
+  final TextAlign? attributionTextAlignment;
+
+  /// The optional alignment for the quote text widget.
+  final Alignment? quoteAlignment;
+
+  /// The optional alignment for the attribution text widget.
   final Alignment? attributionAlignment;
 
   /// The optional spacing widget between the quote and attribution.
@@ -127,10 +140,12 @@ class KeynoteQuoteSlide extends StatelessWidget {
                               gradient: quoteGradient ??
                                   KeynoteGradients.titleSlideGradient,
                               style: quoteStyle,
+                              textAlign: quoteTextAlignment,
                             )
                           : Text(
                               quoteText,
                               style: quoteStyle,
+                              textAlign: quoteTextAlignment,
                             ),
                     ),
                 indexToShowAt: 0,
@@ -148,6 +163,7 @@ class KeynoteQuoteSlide extends StatelessWidget {
                       child: Text(
                         attributionText ?? '',
                         style: attributionStyle,
+                        textAlign: attributionTextAlignment,
                       ),
                     ),
                 indexToShowAt: 1,

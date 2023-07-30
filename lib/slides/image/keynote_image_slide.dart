@@ -8,7 +8,7 @@ class KeynoteImageSlide extends StatelessWidget {
   ///
   /// [image] is the widget representing the image to display on the slide.
   ///
-  /// [padding] is the optional padding for the slide.
+  /// [padding] is the padding for the slide.
   const KeynoteImageSlide({
     required this.image,
     this.padding,
@@ -18,7 +18,7 @@ class KeynoteImageSlide extends StatelessWidget {
   /// The widget representing the image to display on the slide.
   final Widget image;
 
-  /// The optional padding for the slide.
+  /// The padding for the slide.
   final EdgeInsets? padding;
 
   @override

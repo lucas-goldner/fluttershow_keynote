@@ -11,7 +11,7 @@ class KeynoteTitleBulletAndPhotoSlideVariants {
   ///
   /// The [titleText] is the main title displayed on the slide.
   ///
-  /// The [subTitleText] is an optional subtitle displayed below the title.
+  /// The [subTitleText] is an subtitle displayed below the title.
   ///
   /// The [image] is the main image displayed on the slide.
   ///
@@ -49,7 +49,7 @@ class KeynoteTitleBulletAndPhotoSlideVariants {
   ///
   /// The [titleText] is the main title displayed on the slide.
   ///
-  /// The [subTitleText] is an optional subtitle displayed below the title.
+  /// The [subTitleText] is an subtitle displayed below the title.
   ///
   /// The [image] is the main image displayed on the slide.
   ///
