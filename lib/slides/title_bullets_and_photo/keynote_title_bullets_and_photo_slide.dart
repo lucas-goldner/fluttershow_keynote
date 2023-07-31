@@ -11,7 +11,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   ///
   /// The [titleText] is the main title displayed on the slide.
   ///
-  /// The [subTitleText] is an optional subtitle displayed below the title.
+  /// The [subTitleText] is an subtitle displayed below the title.
   ///
   /// The [image] is the main image displayed on the slide.
   ///
@@ -28,31 +28,30 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   /// the default style is used.
   ///
   /// The [bulletTextStyle] is the style for the bullet point text.
-  /// If not provided, the default style is used.
   ///
   /// The [titleAlignment] is the alignment of the title text within its space.
-  /// If not provided, the default alignment is used.
   ///
   /// The [subtitleAlignment] is the alignment of the subtitle text within
-  /// its space. If not provided, the default alignment is used.
+  /// its space.
   ///
   /// The [bulletPointsAlignment] is the alignment of the bullet points
-  /// within their space. If not provided, the default alignment is used.
+  /// within their space.
+  ///
+  /// The [titleTextAlignment] is the text alignment of title text.
+  ///
+  /// The [subtitleTextAlignment] is the text alignment of subtitle text.
   ///
   /// The [bulletTextAlignment] is the alignment of the bullet text within each
-  /// bullet point. If not provided, the default alignment is used.
+  /// bullet point.
   ///
   /// The [bulletPointsPadding] is the padding around the bullet points.
-  /// If not provided, the default padding is used.
   ///
   /// The [padding] is the padding around the entire slide.
-  /// If not provided, the default padding is used.
   ///
   /// The [titleSubTitleSpacing] is the spacing between the title and subtitle.
-  /// If not provided, the default spacing is used.
   ///
   /// The [subtitleBulletSpacing] is the spacing between the subtitle and
-  /// bullet points. If not provided, the default spacing is used.
+  /// bullet points.
   ///
   /// The [headerFlexUnits] is the number of flex units for the header section.
   /// If not provided, the default number of units is used.
@@ -92,6 +91,8 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
     this.titleAlignment,
     this.subtitleAlignment,
     this.bulletPointsAlignment,
+    this.titleTextAlignment,
+    this.subtitleTextAlignment,
     this.bulletTextAlignment,
     this.bulletPointsPadding,
     this.padding,
@@ -115,7 +116,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   /// The main title displayed on the slide.
   final String titleText;
 
-  /// An optional subtitle displayed below the title.
+  /// An subtitle displayed below the title.
   final String subTitleText;
 
   /// The bullet points displayed on the slide.
@@ -142,7 +143,13 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   /// The alignment of the bullet points within their space.
   final Alignment? bulletPointsAlignment;
 
-  /// The alignment of the bullet text within each bullet point.
+  /// The text alignment of the title text.
+  final TextAlign? titleTextAlignment;
+
+  /// The text alignment of the subtitle text.
+  final TextAlign? subtitleTextAlignment;
+
+  /// The text alignment of the bullet text.
   final TextAlign? bulletTextAlignment;
 
   /// The padding around the entire slide.
@@ -184,13 +191,16 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   /// The configuration for the slide animations.
   final AnimationArguments? animationArguments;
 
+  // Amount of elements before the bullet points showing up.
+  int get _widgetsBeforeBulletPoints => 3;
+
   /// Calculates the adjusted animation index for bullet points.
   int getAnimationIndices() {
     if (animationIndex != null) {
-      return (animationIndex ?? 0) - 3;
+      return (animationIndex ?? 0) - _widgetsBeforeBulletPoints;
     }
 
-    return 3;
+    return _widgetsBeforeBulletPoints;
   }
 
   @override
@@ -209,6 +219,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
                             child: Text(
                               titleText,
                               style: titleStyle,
+                              textAlign: titleTextAlignment,
                             ),
                           ),
                       indexToShowAt: 0,
@@ -226,6 +237,7 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
                             child: Text(
                               subTitleText,
                               style: subtitleStyle,
+                              textAlign: subtitleTextAlignment,
                             ),
                           ),
                       indexToShowAt: 1,

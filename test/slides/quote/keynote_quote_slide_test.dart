@@ -59,7 +59,7 @@ void main() {
             body: KeynoteQuoteSlideVariants.variantOne(
               quoteText: quoteText,
               attributionText: attribution,
-              gradient: quoteGradient,
+              quoteGradient: quoteGradient,
             ),
           ),
         ),

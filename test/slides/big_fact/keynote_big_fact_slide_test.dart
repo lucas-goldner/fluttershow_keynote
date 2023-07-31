@@ -36,7 +36,7 @@ void main() {
             body: KeynoteBigFactSlideVariants.variantOne(
               titleText: titleText,
               subTitleText: subTitleText,
-              gradient: gradient,
+              titleGradient: gradient,
             ),
           ),
         ),
