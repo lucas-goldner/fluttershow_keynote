@@ -20,7 +20,7 @@ void main() {
               subTitleText: subTitleText,
               headingText: headingText,
               image: const Placeholder(),
-              gradient: gradient,
+              titleGradient: gradient,
             ),
           ),
         ),

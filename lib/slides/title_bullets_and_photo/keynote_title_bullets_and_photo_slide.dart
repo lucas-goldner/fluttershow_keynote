@@ -191,13 +191,16 @@ class KeynoteTitleBulletAndPhotoSlide extends StatelessWidget {
   /// The configuration for the slide animations.
   final AnimationArguments? animationArguments;
 
+  // Amount of elements before the bullet points showing up.
+  int get _widgetsBeforeBulletPoints => 3;
+
   /// Calculates the adjusted animation index for bullet points.
   int getAnimationIndices() {
     if (animationIndex != null) {
-      return (animationIndex ?? 0) - 3;
+      return (animationIndex ?? 0) - _widgetsBeforeBulletPoints;
     }
 
-    return 3;
+    return _widgetsBeforeBulletPoints;
   }
 
   @override
