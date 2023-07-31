@@ -1,7 +1,11 @@
 name: fluttershow_keynote
-description: Package for FlutterShow framework that recreates all types of slides from Keynote with variations.
-version: 1.0.0
-homepage: https://github.com/lucas-goldner/FlutterShow
+description: Package for FlutterShow framework that recreates all types of slides and styles from Keynote with variations.
+version: 1.1.0
+homepage: https://github.com/lucas-goldner/fluttershow_keynote
+documentation: https://flutter-show-docs.vercel.app/docs/category/fluttershow-keynote
+topics:
+  - presentation
+  - slides
 
 environment:
   sdk: ">=3.0.3 <4.0.0"
